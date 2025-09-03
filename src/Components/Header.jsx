@@ -364,7 +364,7 @@ export default function Header() {
                                                                     <div className="search_logo display-flex">
                                                                         <input type="text" name="q" id="search" className="form-control" placeholder="এখানে খুঁজুন... " />
                                                                         <button className='searchBtn' type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-                                                                        <a onClick={setToggle} className="close-search " aria-label="close search"><i className="fa-solid fa-xmark"></i></a>
+                                                                        <a onClick={setToggle} className="close-search " aria-label="close search" href="#"><i className="fa-solid fa-xmark"></i></a>
                                                                     </div>
                                                                 </form>
                                                             </div>

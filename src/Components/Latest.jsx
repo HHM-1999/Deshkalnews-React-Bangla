@@ -109,13 +109,13 @@ export default function Latest() {
                 <div className="TopHomeSection"></div>
                 <DocumentTitle title="আজকের সর্বশেষ খবর, ব্রেকিং নিউজ | Latest news, Breaking news | DeshkalNews.com" />
                 <LatestLdJson />
-                <div className="DTitle"><Link to="/latest"><div className="DTitleInner"><h1 className="DTitleInnerBar"><span>সব খবর</span></h1></div></Link></div>
+                <div className="DTitle"><Link to="/bangla/latest"><div className="DTitleInner"><h1 className="DTitleInnerBar"><span>সব খবর</span></h1></div></Link></div>
                 <div className="row archiveSection">
                     {news.map((nc) => {
                         return (
                             <div className="col-lg-6 col-sm-12" key={nc.ContentID}>
                                 <div className="archiveListNews" >
-                                    <Link rel="preload" as="image" to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                    <Link rel="preload" as="image" to={"/bangla/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                         <div className="row">
                                             <div className="col-sm-4 col-5 card-video-part">
                                                 <div className="DImgZoomBlock">
