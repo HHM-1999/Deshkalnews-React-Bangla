@@ -2824,6 +2824,7 @@ span.mvp-feat1-pop-head {
 	/* background: #e5dcd0!important; */
 }
 
+
 .nav-link {
 	padding: 0;
 }
@@ -2909,6 +2910,23 @@ span.mvp-feat1-pop-head {
 
 .SectionTitle.SpTitle h3 {
 	color: #fff
+}
+
+/*  faq segment */
+.main-site .faq-area p{
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.main-site .faq-area .accordion-item {
+	background-color: #fff;
+	border: none;
+}
+.main-site .faq-area  .accordion-item:first-of-type{
+	border: 1px solid #dedede;
+}
+.main-site .faq-area .accordion-button:not(.collapsed){
+	color: #eb030b;
+	box-shadow: none;
 }
 
 
@@ -7802,7 +7820,9 @@ span.CategoryPageTitle {
 	.DHomeAdd970X90 {
 		display: none;
 	}
-
+	.header-meta-link ul li a{
+		font-size: 15px;
+	}
 	.DHomeAdd350x250 {
 		display: flex;
 		justify-content: center;

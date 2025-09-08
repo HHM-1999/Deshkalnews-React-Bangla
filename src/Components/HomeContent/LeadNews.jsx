@@ -52,8 +52,8 @@ export default function LeadNews() {
                                         <div className="Desc">
                                             <div className="LeadImage Imgresize">
                                                 {LeadData.ImageBgPath == null ?
-                                                    <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_LAZYL_IMG} alt={LeadData.DetailsHeading} title={LeadData.DetailsHeading}    fetchpriority="high" className="img-fluid img100" width={800} height={450} /> :
-                                                    <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_IMG_Path + LeadData.ImageBgPath} alt={LeadData.DetailsHeading} title={LeadData.DetailsHeading}    fetchpriority="high" className="img-fluid img100" width={800} height={450} />}
+                                                    <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_LAZYL_IMG} alt={LeadData.DetailsHeading} title={LeadData.DetailsHeading}    fetchpriority="high" className="img-fluid" width={800} height={450} /> :
+                                                    <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_IMG_Path + LeadData.ImageBgPath} alt={LeadData.DetailsHeading} title={LeadData.DetailsHeading}    fetchpriority="high" className="img-fluid" width={800} height={450} />}
 
                                                 {LeadData.ShowVideo === 1 && <div className="video-icon"><i className="fa-solid fa-play"></i></div>}
                                             </div>

@@ -41,6 +41,7 @@ export default function Details() {
     const [catPopular, setCatPopular] = useState([])
     const [writer, setWriter] = useState([]);
     const [heading, setHeading] = useState([]);
+    const [openIndex, setOpenIndex] = useState(null);
     // const [loading, setLoading] = useState(true);
     const [fontSize, setFontSize] = useState(20);
     const PrintAble = () => { window.print(); };
@@ -60,7 +61,7 @@ export default function Details() {
                     // setisLoading(false)
                     // setLoading(false);
                     catID = data.category.CategoryID
-                    DisplayCatName= data.category.DisplayCatName
+                    DisplayCatName = data.category.DisplayCatName
                     try {
                         axios
                             .get(`${process.env.REACT_APP_API_URL}category-latest-content/${catID}/4`)
@@ -134,7 +135,7 @@ export default function Details() {
                     if (data.data) {
                         setLeadData(data.data);
                         setcount(data.data.content_liveblogs)
-                        setWriter(data.data.content_contributors)
+                        // setWriter(data.data.content_contributors)
                     } else setLeadData("");
                 });
         }
@@ -339,7 +340,13 @@ export default function Details() {
 
         return result.join("");
     }
-
+    const toggleAccordion = (id) => {
+        if (openIndex === id) {
+            setOpenIndex(null); // close if same clicked
+        } else {
+            setOpenIndex(id);
+        }
+    };
 
 
     return (
@@ -349,7 +356,7 @@ export default function Details() {
             {catSlug ?
                 <main>
                     <div className="container">
-                    {state ? <Ldjson news={state} catName={catName} catSlug={catSlug} DisplayCatName={DisplayCatName} /> : ""}
+                        {state ? <Ldjson news={state} catName={catName} catSlug={catSlug} DisplayCatName={DisplayCatName} /> : ""}
                         <DocumentTitle title={heading} />
                         {!LeadData ?
                             <div className="live-title-wrap"></div> :
@@ -560,7 +567,6 @@ export default function Details() {
                             {/* const isLiveNews = state.ShowLiveBlog === 1 && state.LiveBlogStatus === 1; */}
                             {/* return ( */}
                             <div className="newsDetail" id={state.ContentID} data-title={state.DetailsHeading} key={state.ContentID}>
-                    
                                 <div className="row mt-2">
                                     <div className="col-lg-8 col-12">
                                         <div className="ContentDetails">
@@ -611,7 +617,7 @@ export default function Details() {
                                             <>
                                                 <div className="DTopImg">
                                                     <div className="Details">
-                                                        <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_IMG_Path + state.ImageBgPath} alt={state.DetailsHeading} title={state.DetailsHeading} fetchpriority="high" className="img-fluid img100" style={{width: "800px", height:"100%"}}  />
+                                                        <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_IMG_Path + state.ImageBgPath} alt={state.DetailsHeading} title={state.DetailsHeading} fetchpriority="high" className="img-fluid img100" style={{ width: "800px", height: "100%" }} />
                                                     </div>
                                                     {state.ImageBgPathCaption ?
                                                         <div className="DetailsTopCap">
@@ -705,6 +711,48 @@ export default function Details() {
                                                             </div>
                                                         </div>
                                                     </div> : " "
+                                                }
+                                                {state.faq ?
+                                                    <>
+                                                        <div className="faq-area-section">
+                                                            <div className="RelatedTags d-print-none">
+                                                                <div className="row">
+                                                                    <div className="col-sm-12">
+                                                                        <div className="faq-area">
+                                                                            <div className="accordion" id="accordionExample">
+                                                                                {state.faq.map((item) => {
+                                                                                    return (
+                                                                                        <>
+                                                                                            <p className="Subject"> <FaTag /> FAQ : </p>
+                                                                                            <div className="accordion-item mt-3" key={item.id}>
+                                                                                                <h2 className="accordion-header">
+                                                                                                    <button
+                                                                                                        className={`accordion-button ${openIndex === item.id ? "" : "collapsed"
+                                                                                                            }`}
+                                                                                                        type="button"
+                                                                                                        onClick={() => toggleAccordion(item.id)}
+                                                                                                    >
+                                                                                                        {item.Question}
+                                                                                                    </button>
+                                                                                                </h2>
+                                                                                                <div
+                                                                                                    className={`accordion-collapse collapse ${openIndex === item.id ? "show" : ""
+                                                                                                        }`}
+                                                                                                >
+                                                                                                    <div className="accordion-body">{item.Answer}</div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </>
+
+                                                                                    )
+                                                                                })}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </> : ""
                                                 }
                                                 <DfbComment contentID={state.ContentID} />
                                             </>
