@@ -37,7 +37,7 @@ export default function Lifestyle() {
                 <div className="CommonSecNews3-wrapper">
                     {List1 ?
                         <div className="CommonLead3">
-                            <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                            <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                                 <div className="row">
                                     <div className="col-lg-7 Imgresize">
                                         <picture>
@@ -73,7 +73,7 @@ export default function Lifestyle() {
                                 return (
                                     <div className="col-lg-4" key={i}>
                                         <div className="CommonLead">
-                                            <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                            <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                                 <div className="row">
                                                     <div className="col-lg-12 col-5 Imgresize">
                                                         <picture>

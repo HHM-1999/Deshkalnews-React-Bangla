@@ -26,7 +26,7 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                           "width": "800",
                           "height": "450"
                         },
-                        "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/details/${catSlug}/${news.ContentID}",
+                        "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}/${catSlug}/${news.ContentID}",
                         "datePublished": "${convertToBSTISOString (news.created_at)}",
                         "dateModified": "${convertToBSTISOString(news.ModifiedDate)}",
                         "dateCreated": "${convertToBSTISOString(news.created_at)}",
@@ -44,7 +44,7 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                         },
                         "mainEntityOfPage": {
                           "@type": "WebPage",
-                          "@id": "${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/details/${catSlug}/${news.ContentID}"
+                          "@id": "${process.env.REACT_APP_FONT_DOMAIN_URL}/${catSlug}/${news.ContentID}"
                         },
                         "keywords": "${KeyWord}",
                         "thumbnailUrl": "${process.env.REACT_APP_IMG_Path + news.ImageBgPath}bangla",
@@ -53,7 +53,7 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                         "isAccessibleForFree": true,
                         "isPartOf": {
                           "@type": "WebPage",
-                          "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/details/${catSlug}/${news.ContentID}",
+                          "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}/${catSlug}/${news.ContentID}",
                           "primaryImageOfPage": {
                             "@type": "ImageObject",
                             "url": "${process.env.REACT_APP_IMG_Path + news.ImageBgPath}bangla",
@@ -77,7 +77,7 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                                 "name":"Home",
                                 "item":{
                                     "@type": "Thing",
-                                    "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}bangla",
+                                    "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}",
                                     "name": "Deshkal News"
                                 }
                             },
@@ -85,7 +85,7 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                                 "@type": "ListItem",
                                 "position":2,
                                 "item":{
-                                    "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/${catSlug}",
+                                    "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}/${catSlug}",
                                     "name":"${catName}"
                                 }
                             },
@@ -94,7 +94,7 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                                 "position":3,
                                 "item":{
                                     "name" :"${newHeader}",
-                                    "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/details/${catSlug}/${news.ContentID}"
+                                    "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}/${catSlug}/${news.ContentID}"
                                 }
                             }
                         ]
@@ -111,11 +111,11 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                             "width":"800",
                             "height":"450"
                         },
-                        "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/details/${catSlug}/${news.ContentID}",
+                        "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}/${catSlug}/${news.ContentID}",
                         "datePublished":"${convertToBSTISOString(news.created_at)}",
                         "mainEntityOfPage":{
                             "@type":"WebPage",
-                            "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/details/${catSlug}/${news.ContentID}"
+                            "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}/${catSlug}/${news.ContentID}"
                         },
                         "publisher":{
                             "@type":"Organization",
@@ -151,7 +151,7 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                         "isAccessibleForFree":true,
                         "isPartOf":{
                             "@type":"WebPage",
-                            "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/details/${catSlug}/${news.ContentID}",
+                            "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}/${catSlug}/${news.ContentID}",
                             "primaryImageOfPage":{
                                 "@type":"ImageObject",
                                 "url":"${process.env.REACT_APP_IMG_Path + news.ImageBgPath}bangla",

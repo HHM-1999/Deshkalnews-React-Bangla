@@ -35,7 +35,7 @@ export default function Job() {
                 </div>
 
                 <div className="CommonLead">
-                    <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                    <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                         <div className="Imgresize">
                             <picture>
                                 {List1.ImageBgPath == null ?
@@ -56,7 +56,7 @@ export default function Job() {
                     List2.map((item, index) => {
                         return (
                             <div className="CommonLeadList">
-                                <Link to={"/details/" + item.Slug + "/" + item.ContentID} onClick={scrollTop} key={index}>
+                                <Link to={"/" + item.Slug + "/" + item.ContentID} onClick={scrollTop} key={index}>
                                     <div className="row">
                                         <div className="col-lg-6 col-5">
                                             <div className="Imgresize">

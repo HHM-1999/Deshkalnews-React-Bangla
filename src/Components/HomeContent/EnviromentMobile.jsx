@@ -41,7 +41,7 @@ export default function EnviromentMobile() {
                     <div className="col-lg-6">
                         <div className="multiple-news-wrap">
                             <div className="CommonLead">
-                                <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                                <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                                     <div className="Imgresize">
 
                                         <picture>
@@ -63,7 +63,7 @@ export default function EnviromentMobile() {
                                 {List2.map((item, index) => {
                                     return (
                                         <div className="Common-listBox-item" key={index}>
-                                            <Link to={"/details/" + item.Slug + "/" + item.ContentID} onClick={scrollTop} >
+                                            <Link to={"/" + item.Slug + "/" + item.ContentID} onClick={scrollTop} >
                                                 <div className="Desc">
                                                     {item.AltHomeTitle ?
                                                         <h3 className="Title">{item.AltHomeTitle}

@@ -134,7 +134,6 @@ export default function Home() {
                                     {/* <Education /> */}
                                     {/* <LawCourt /> */}
                                     <div className="mt-3">
-
                                         <LawCourt />
                                         <EducationCampus />
                                     </div>
@@ -142,9 +141,7 @@ export default function Home() {
                                 <div className="MblShow">
                                     <EducationMobile />
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 </section>

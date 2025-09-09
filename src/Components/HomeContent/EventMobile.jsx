@@ -40,7 +40,7 @@ export default function EventMobile() {
                                 return (
                                     <div className="col-6" key={index}>
                                         <div className="CommonLead">
-                                            <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                            <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                                 <div className="Imgresize">
                                                     <picture>
                                                         {nc.ImageBgPath == null ?

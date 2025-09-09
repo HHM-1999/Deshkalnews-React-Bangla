@@ -35,7 +35,7 @@ export default function Sahitto() {
 
             <div className="CommonSecNews3-wrapper">
                 <div className="CommonLead3">
-                    <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                    <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                         <div className="row">
                             <div className="col-sm-6 d-flex align-items-center Imgresize">
                                 <picture>

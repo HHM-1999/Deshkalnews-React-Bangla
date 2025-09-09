@@ -40,7 +40,7 @@ export default function Country() {
                     <div className="col-lg-8 border-right-inner">
                         {list1 ?
                             <div className="CommonLead">
-                                <Link to={"/details/" + list1.Slug + "/" + list1.ContentID} onClick={scrollTop}>
+                                <Link to={"/" + list1.Slug + "/" + list1.ContentID} onClick={scrollTop}>
                                     <div className="Imgresize">
                                         <picture>
                                             {list1.ImageBgPath == null ?
@@ -68,7 +68,7 @@ export default function Country() {
                         {list2.map((list, i) => {
                             return (
                                 <div className="CommonLeadList" key={i}>
-                                    <Link to={"/details/" + list.Slug + "/" + list.ContentID} onClick={scrollTop}>
+                                    <Link to={"/" + list.Slug + "/" + list.ContentID} onClick={scrollTop}>
                                         <div className="row">
                                             <div className="col-lg-6 col-5">
                                                 <div className="Imgresize">

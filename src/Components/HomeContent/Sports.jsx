@@ -57,7 +57,7 @@ export default function Sports() {
                 </div>
             </div>
             <div className="sports-BGimg Imgresize">
-                <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                     <picture>
                         {List1.ImageBgPath == null ?
                             <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_LAZYL_IMG} alt={List1.DetailsHeading} title={List1.DetailsHeading} fetchpriority="high" className="img-fluid img100" style={{width: "100%", height:"100%"}}/>
@@ -72,7 +72,7 @@ export default function Sports() {
                 <div className="row">
                     <div className="col-lg-7 col-12 d-flex Imgresize">
                         <div className="CommonLead3">
-                            <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                            <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                                 <div className="Desc">
                                     {
                                         List1.AltHomeTitle ?
@@ -90,7 +90,7 @@ export default function Sports() {
                                     </div>
                                 </div>
                             </Link>
-                            <Link to={"/details/" + List2.Slug + "/" + List2.ContentID} onClick={scrollTop}>
+                            <Link to={"/" + List2.Slug + "/" + List2.ContentID} onClick={scrollTop}>
                                 <picture>
                                     {List2.ImageSmPath == null ?
                                         <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_LAZYL_IMG} alt={List2.DetailsHeading} title={List2.DetailsHeading} fetchpriority="high" className="img-fluid img100" width={300} height={169} />
@@ -119,7 +119,7 @@ export default function Sports() {
                         {List3.map((nc, i) => {
                             return (
                                 <div className="CommonLeadList" key={i}>
-                                    <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                    <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                         <div className="row">
                                             <div className="col-lg-6 col-5">
                                                 <div className="Imgresize">

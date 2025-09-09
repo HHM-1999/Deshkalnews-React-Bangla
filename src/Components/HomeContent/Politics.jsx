@@ -39,7 +39,7 @@ export default function Politics() {
             <div className="CommonSecNews3-wrapper">
                 {List1 ?
                     <div className="CommonLead3">
-                        <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                        <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                             <div className="row">
                                 <div className="col-lg-7 Imgresize">
                                     <picture>
@@ -81,7 +81,7 @@ export default function Politics() {
                     {List2.map((nc, i) => {
                         return (
                             <div className="CommonLeadList" key={i}>
-                                <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                     <div className="row">
                                         <div className="col-lg-6 col-5">
                                             <div className="Imgresize">
@@ -120,7 +120,7 @@ export default function Politics() {
                     {List3.map((nc, i) => {
                         return (
                             <div className="CommonLeadList" key={i}>
-                                <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                     <div className="row">
                                         <div className="col-lg-6 col-5">
                                             <div className="Imgresize">

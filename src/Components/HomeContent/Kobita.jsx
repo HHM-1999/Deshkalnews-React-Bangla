@@ -46,7 +46,7 @@ export default function Kobita() {
 
                                 return (
                                     <div className="Common-listBox-item" key={index}>
-                                        <Link to={"/details/" + item.Slug + "/" + item.ContentID} onClick={scrollTop}>
+                                        <Link to={"/" + item.Slug + "/" + item.ContentID} onClick={scrollTop}>
                                             <div className="Desc">
                                                 {item.AltHomeTitle ?
                                                 <h3 className="Title">{item.AltHomeTitle}</h3> :

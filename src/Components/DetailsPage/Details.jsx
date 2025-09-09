@@ -286,7 +286,7 @@ export default function Details() {
             if (contentDetailsChildDiv !== null) {
                 R_HTML += `<div className="col-lg-3 col-12 d-flex ss">
                     <div className="DRelatedNewsList align-self-stretch">
-                        <a href=${process.env.REACT_APP_FONT_DOMAIN_URL + "/details/" + R_Arr[i].Slug + R_Arr[i].ContentID}>
+                        <a href=${process.env.REACT_APP_FONT_DOMAIN_URL + "/" + R_Arr[i].Slug + R_Arr[i].ContentID}>
                             <div className="row">
                                 <div className="col-lg-12 col-sm-4 col-5">
                                     <div className="DImgZoomBlocktest">
@@ -515,7 +515,7 @@ export default function Details() {
 
                                                                             <ul className="InnerReadMoreList">
                                                                                 <li key={nc.ContentID}>
-                                                                                    <a href={"/details/" + nc.Slug + "/" + nc.ContentID}><span><div className="SquareIcon"></div>{nc.DetailsHeading}</span></a>
+                                                                                    <a href={"/" + nc.Slug + "/" + nc.ContentID}><span><div className="SquareIcon"></div>{nc.DetailsHeading}</span></a>
                                                                                 </li>
                                                                             </ul>
                                                                         )
@@ -687,7 +687,7 @@ export default function Details() {
 
                                                                 <ul className="InnerReadMoreList">
                                                                     <li key={nc.ContentID}>
-                                                                        <a href={"/details/" + nc.Slug + "/" + nc.ContentID}><span><div className="SquareIcon"></div>{nc.DetailsHeading}</span></a>
+                                                                        <a href={"/" + nc.Slug + "/" + nc.ContentID}><span><div className="SquareIcon"></div>{nc.DetailsHeading}</span></a>
                                                                     </li>
                                                                 </ul>
                                                             )

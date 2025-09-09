@@ -48,7 +48,7 @@ export default function LeadNews() {
                         <div className="col-lg-6 col-12 border-right-inner">
                             {LeadData.ShowLiveBlog === 2 && LeadData.LiveBlogStatus === 2 ?
                                 <div className="DLeadNews">
-                                    <Link rel="preload" as="image" to={"/details/" + LeadData.categorySlug + "/" + LeadData.ContentID}  onClick={scrollTop}>
+                                    <Link rel="preload" as="image" to={"/" + LeadData.categorySlug + "/" + LeadData.ContentID}  onClick={scrollTop}>
                                         <div className="Desc">
                                             <div className="LeadImage Imgresize">
                                                 {LeadData.ImageBgPath == null ?
@@ -78,7 +78,7 @@ export default function LeadNews() {
                                     </Link>
                                 </div>
                                 : <div className="DLeadNews">
-                                    <Link to={"details/" + LeadData.categorySlug + "/" + LeadData.ContentID} onClick={scrollTop}>
+                                    <Link to={"/" + LeadData.categorySlug + "/" + LeadData.ContentID} onClick={scrollTop}>
 
                                         <div className="live-title-wrap">
                                             {/* <div className="LiveButton">
@@ -131,7 +131,7 @@ export default function LeadNews() {
                                     {tagsRelatedNews?.map((nc, i) => {
                                         return (
                                             <div className="CommonLeadList2" key={i} >
-                                                <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}  >
+                                                <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}  >
                                                     <div className="row">
                                                         <div className="col-lg-5 col-5">
                                                             <div className="Imgresize">
@@ -176,17 +176,17 @@ export default function LeadNews() {
                                                         <>
 
                                                             {nc.AltHomeTitle ?
-                                                                <li key={i}><Link to={"/details/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}>{nc.AltHomeTitle}</Link></li> :
-                                                                <li key={i}><Link to={"/details/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}>{nc.DetailsHeading}</Link></li>
+                                                                <li key={i}><Link to={"/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}>{nc.AltHomeTitle}</Link></li> :
+                                                                <li key={i}><Link to={"/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}>{nc.DetailsHeading}</Link></li>
                                                             }
                                                         </>
                                                         :
                                                         <>
 
                                                             {nc.AltHomeTitle ?
-                                                                <li key={i}><Link to={"/details/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}><span className="LiveButton">
+                                                                <li key={i}><Link to={"/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}><span className="LiveButton">
                                                                     <div className="circle--inner"></div></span>{nc.AltHomeTitle}</Link></li> :
-                                                                <li key={i}><Link to={"/details/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}><span className="LiveButton">
+                                                                <li key={i}><Link to={"/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}><span className="LiveButton">
                                                                     <div className="circle--inner"></div></span>{nc.DetailsHeading}</Link></li>
                                                             }
                                                         </>}

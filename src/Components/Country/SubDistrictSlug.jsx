@@ -150,7 +150,7 @@ export default function SubDistrictSlug() {
                                                     <div className="col-lg-6 col-sm-12">
                                                         <div className="Division-panel">
                                                             <div className="DistrictListNews">
-                                                                <Link to={"/details/" + districtSlug + "/" + nc.ContentID} onClick={scrollTop}>
+                                                                <Link to={"/" + districtSlug + "/" + nc.ContentID} onClick={scrollTop}>
                                                                     <div className="row">
                                                                         <div className="col-lg-5 col-sm-4 col-5 card-video-part">
                                                                             <div className="DImgZoomBlock">

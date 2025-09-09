@@ -46,7 +46,7 @@ export default function Econmics() {
                 <div className="CommonSecNews3-wrapper">
                     {List1 ?
                         <div className="CommonLead3">
-                            <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                            <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                                 <div className="row">
                                     <div className="col-lg-4 Imgresize">
                                         <picture>
@@ -88,7 +88,7 @@ export default function Econmics() {
                         <div className="multiple-news-wrap">
                             {List2 ?
                                 <div className="CommonLead">
-                                    <Link to={"/details/" + List2.Slug + "/" + List2.ContentID} onClick={scrollTop} >
+                                    <Link to={"/" + List2.Slug + "/" + List2.ContentID} onClick={scrollTop} >
                                         <div className="row">
                                             <div className="col-lg-12 col-5 Imgresize">
                                                 <picture>
@@ -126,7 +126,7 @@ export default function Econmics() {
                         <div className="multiple-news-wrap">
                             {List3 ?
                                 <div className="CommonLead">
-                                    <Link to={"/details/" + List3.Slug + "/" + List3.ContentID} onClick={scrollTop} >
+                                    <Link to={"/" + List3.Slug + "/" + List3.ContentID} onClick={scrollTop} >
                                         <div className="row">
                                             <div className="col-lg-12 col-5 Imgresize">
                                                 <picture>
@@ -169,7 +169,7 @@ export default function Econmics() {
                                 <div className="col-lg-6" key={i}>
                                     <div className="Common-list">
                                         <div className="Common-listBox-item">
-                                            <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                            <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                                 <div className="Desc">
                                                     {nc.AltHomeTitle ?
                                                         <h3 className="Title">{nc.AltHomeTitle}</h3> :

@@ -76,7 +76,7 @@ export default function DivisionSlug() {
                                                                     <div className="DivisionBody" key={i}>
                                                                         {i === 0 ?
                                                                             <div className="DivisionLeadNews">
-                                                                                <Link rel="preload" as="image" to={"/details/country" + "/" + nd.ContentID} onClick={scrollTop}>
+                                                                                <Link rel="preload" as="image" to={"/country" + "/" + nd.ContentID} onClick={scrollTop}>
                                                                                     <div className="DImgBlock card-video-part">
                                                                                         <div className="DImgZoomBlock">
                                                                                             <picture><img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_IMG_Path + nd.ImageBgPath} alt={nd.DetailsHeading} title={nd.DetailsHeading} fetchpriority="high" style={{width: "100%", height:"auto"}} /></picture>
@@ -89,7 +89,7 @@ export default function DivisionSlug() {
                                                                                 </Link>
                                                                             </div> :
                                                                             <div className="DivisionListNews">
-                                                                                <Link to={"/details/" + divisionSlug + "/" + nd.ContentID} onClick={scrollTop}>
+                                                                                <Link to={"/" + divisionSlug + "/" + nd.ContentID} onClick={scrollTop}>
                                                                                     <div className="Desc">
                                                                                         <h3 className="Title">
                                                                                             {nd.DetailsHeading}

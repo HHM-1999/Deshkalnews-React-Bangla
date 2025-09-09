@@ -14,7 +14,7 @@ export default function CatNewsMore({ articles }) {
                 return (
                     <div className="col-lg-6 col-12 d-flex " key={nc.ContentID}>
                         <div className="DCatNewsList  align-self-stretch ">
-                            <Link href={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                            <Link href={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                 <div className="row">
                                     <div className="col-lg-5 col-sm-4 col-5">
                                         <div className="DImgZoomBlock">

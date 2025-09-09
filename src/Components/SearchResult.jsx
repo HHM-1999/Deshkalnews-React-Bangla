@@ -123,12 +123,12 @@ export default function SearchResult() {
                                 {news.map((nc) => (
                                     <div className="col-lg-6 col-sm-12" key={nc.ContentID}>
                                         <div className="archiveListNews">
-                                            <Link rel="preload" as="image" to={`/details/${nc.Slug}/${nc.ContentID}`} onClick={scrollTop}>
+                                            <Link rel="preload" as="image" to={`"/"+${nc.Slug}/${nc.ContentID}`} onClick={scrollTop}>
                                                 <div className="row">
                                                     <div className="col-sm-4 col-5 card-video-part">
                                                         <div className="DImgZoomBlock">
                                                             <picture>
-                                                                <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_IMG_Path + nc.ImageSmPath} alt={nc.ContentHeading} fetchpriority="high" style={{width: "100%", height:"auto"}}/>
+                                                                <img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_IMG_Path + nc.ImageSmPath} alt={nc.ContentHeading} fetchpriority="high" style={{ width: "100%", height: "auto" }} />
                                                             </picture>
                                                             {nc.ShowVideo === 1 && <div className="video-icon"><i className="fa-solid fa-play"></i></div>}
                                                         </div>

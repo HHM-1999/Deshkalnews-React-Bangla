@@ -88,7 +88,7 @@ export default function SahittoSlider() {
                         return (
                             <div className="items Common-list3-details" key={i}>
 
-                                <Link to={"/details/" + list.Slug + "/" + list.ContentID} onClick={scrollTop} >
+                                <Link to={"/" + list.Slug + "/" + list.ContentID} onClick={scrollTop} >
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="Common-list3-img Imgresize">

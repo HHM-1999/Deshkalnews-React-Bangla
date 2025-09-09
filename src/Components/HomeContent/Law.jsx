@@ -35,7 +35,7 @@ export default  function Law() {
             <div className="CatListWrapper">
                 {List1 ?
                 <div className="CatListLead d-flex BorderBottom"  key={List1.ContentID} >
-                    <Link to={"/details/" + List1.Slug + "/" + List1.ContentID}>
+                    <Link to={"/" + List1.Slug + "/" + List1.ContentID}>
                         <picture>
                             {List1.ImageBgPath == null ?
                                 <img src={process.env.REACT_APP_LAZYL_IMG} alt={List1.DetailsHeading} title={List1.DetailsHeading} className="img-fluid img100" />
@@ -54,7 +54,7 @@ export default  function Law() {
                 {List2.map((nc) => {
                     return (
                         <div className="CommonLeadList" key={nc.ContentID}>
-                            <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} >
+                            <Link to={"/" + nc.Slug + "/" + nc.ContentID} >
                                 <div className="row">
                                     <div className="col-lg-5 col-5">
                                         <div className="">

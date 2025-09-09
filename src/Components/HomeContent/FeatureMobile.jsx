@@ -64,7 +64,7 @@ export default function FeatureMobile() {
                         <div className="col-lg-7 col-12 d-flex">
                             {List1 ?
                                 <div className="CommonLead">
-                                    <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                                    <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                                         <div className="Imgresize">
                                             <picture>
                                                 {List1.ImageBgPath == null ?
@@ -97,7 +97,7 @@ export default function FeatureMobile() {
                             {List2.map((nc, index) => {
                                 return (
                                     <div className="CommonLeadList" key={index}>
-                                        <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                        <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                             <div className="row">
                                                 <div className="col-lg-5 col-5">
                                                     <div className="Imgresize">

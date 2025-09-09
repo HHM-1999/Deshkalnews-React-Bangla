@@ -77,7 +77,7 @@ export default function LatestPopular({generateLatest, generatePopular}) {
                                         {generateLatest && generateLatest.map((nc, i) => {
                                             return (
                                                 <div className="DLatestNewsList" key={nc.ContentID}>
-                                                    <Link to={"/details/" + nc.categorySlug + "/" + nc.ContentID}>
+                                                    <Link to={"/" + nc.categorySlug + "/" + nc.ContentID}>
                                                         <div className="row">
                                                             <div className="col-lg-2">
                                                                 <div className="d-flex  align-items-center"><span>{toBengaliNumber(i + 1)}</span>
@@ -108,7 +108,7 @@ export default function LatestPopular({generateLatest, generatePopular}) {
                                         {generatePopular && generatePopular.map((nc, i) => {
                                             return (
                                                 <div className="DLatestNewsList" key={nc.ContentID}>
-                                                    <Link to={"/details/" + nc.categorySlug + "/" + nc.ContentID}>
+                                                    <Link to={"/" + nc.categorySlug + "/" + nc.ContentID}>
                                                         <div className="row">
                                                             <div className="col-lg-2">
                                                                 <div className="d-flex  align-items-center"><span>{toBengaliNumber(i + 1)}</span>

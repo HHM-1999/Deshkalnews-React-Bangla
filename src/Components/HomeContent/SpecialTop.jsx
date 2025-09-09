@@ -59,7 +59,7 @@ export default function SpecialTop() {
                         {tagsRelatedNews?.map((nc, i) => {
                             return (
                                 <div className="CommonLeadList2" key={i} >
-                                    <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}  >
+                                    <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}  >
                                         <div className="row">
                                             <div className="col-lg-5 col-5">
                                                 <div className="Imgresize">
@@ -96,7 +96,7 @@ export default function SpecialTop() {
                     <div className="Common-list">
                         {LeadSpecial1.ShowLiveBlog === 2 && LeadSpecial1.LiveBlogStatus === 2 ?
                             <div className="Common-list-details">
-                                <Link to={"/details/" + LeadSpecial1.categorySlug + "/" + LeadSpecial1.ContentID} onClick={scrollTop}>
+                                <Link to={"/" + LeadSpecial1.categorySlug + "/" + LeadSpecial1.ContentID} onClick={scrollTop}>
                                     <div className="row">
                                         <div className="col-lg-12 col-5 Imgresize">
                                             {LeadSpecial1.ImageSmPath == null ?
@@ -125,7 +125,7 @@ export default function SpecialTop() {
                             :
 
                             <div className="Common-list-details">
-                                <Link to={"/details/" + LeadSpecial1.categorySlug + "/" + LeadSpecial1.ContentID} onClick={scrollTop}>
+                                <Link to={"/" + LeadSpecial1.categorySlug + "/" + LeadSpecial1.ContentID} onClick={scrollTop}>
                                     <div className="row">
                                         <div className="col-lg-12 col-5 Imgresize">
                                             {LeadSpecial1.ImageThumbPath == null ?
@@ -161,7 +161,7 @@ export default function SpecialTop() {
                                 <>
                                     {nc.ShowLiveBlog === 2 && nc.LiveBlogStatus === 2 ?
                                         <div className="CommonLeadList2" key={i} >
-                                            <Link to={"/details/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}  >
+                                            <Link to={"/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}  >
                                                 <div className="row">
                                                     <div className="col-lg-5 col-5">
                                                         <div className="Imgresize">
@@ -189,7 +189,7 @@ export default function SpecialTop() {
                                             </Link>
                                         </div> :
                                         <div className="CommonLeadList2" key={i} >
-                                            <Link to={"/details/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}  >
+                                            <Link to={"/" + nc.categorySlug + "/" + nc.ContentID} onClick={scrollTop}  >
                                                 <div className="row">
                                                     <div className="col-lg-5 col-5">
                                                         <div className="Imgresize">

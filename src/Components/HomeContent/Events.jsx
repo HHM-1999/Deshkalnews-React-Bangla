@@ -96,7 +96,7 @@ export default function Events() {
                         <div className="col-sm-12 mblblock">
                             {list1 && (
                                 <div className="SportsLead">
-                                    <a href={`/details/${list1.categorySlug}/${list1.ContentID}`} onClick={scrollTop}>
+                                    <a href={`/${list1.categorySlug}/${list1.ContentID}`} onClick={scrollTop}>
                                         <picture>
                                             <img
                                                 src={list1.ImageBgPath
@@ -121,7 +121,7 @@ export default function Events() {
                         {news3.map((nc, i) => (
                             <div className="col-6 mblblock" key={i}>
                                 <div className="DeventsSide">
-                                    <a href={`/details/${nc.categorySlug}/${nc.ContentID}`} onClick={scrollTop}>
+                                    <a href={`/${nc.categorySlug}/${nc.ContentID}`} onClick={scrollTop}>
                                         <div className="DImageResize Imgresize">
                                             <picture className="FixingRatio">
                                                 <img
@@ -146,7 +146,7 @@ export default function Events() {
                         {news4.map((nc, i) => (
                             <div className="col-lg-2 mblHide" key={i}>
                                 <div className="DeventsSide">
-                                    <a href={`/details/${nc.categorySlug}/${nc.ContentID}`} onClick={scrollTop}>
+                                    <a href={`/${nc.categorySlug}/${nc.ContentID}`} onClick={scrollTop}>
                                         <div className="DImageResize Imgresize">
                                             <picture className="FixingRatio">
                                                 <img

@@ -36,7 +36,7 @@ export default function SpecialReportMobile() {
                     </div>
                     {List1 ?
                         <div className="CommonLead">
-                            <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                            <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                                 <div className="Imgresize">
                                     <picture>
                                         {List1.ImageSmPath == null ?
@@ -66,7 +66,7 @@ export default function SpecialReportMobile() {
                         List2.map((item, index) => {
                             return (
                                 <div className="CommonLeadList" key={index} >
-                                    <Link to={"/details/" + item.Slug + "/" + item.ContentID} onClick={scrollTop}>
+                                    <Link to={"/" + item.Slug + "/" + item.ContentID} onClick={scrollTop}>
                                         <div className="row">
                                             <div className="col-12">
                                                 <div className="Desc">

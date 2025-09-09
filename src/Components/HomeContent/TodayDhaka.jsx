@@ -37,7 +37,7 @@ export default function TodayDhaka() {
                 <div className="row">
                     <div className="col-lg-12" >
                         <div className="CommonLead">
-                            <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                            <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
                                 <div className="Imgresize">
                                     <picture>
                                         {List1.ImageBgPath == null ?
@@ -65,7 +65,7 @@ export default function TodayDhaka() {
                             List2.map((nc, i) => {
                                 return (
                                     <div className="CommonLeadList" key={i}>
-                                        <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop} >
+                                        <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop} >
                                             <div className="row">
                                                 <div className="col-lg-5 col-5">
                                                     <div className="Imgresize">

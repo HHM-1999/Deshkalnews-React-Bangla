@@ -39,7 +39,7 @@ export default function HealthTalk() {
             </div>
             <div className="CommonSecNews3-wrapper">
                 <div className="CommonLead3">
-                    <Link to={"/details/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
+                    <Link to={"/" + List1.Slug + "/" + List1.ContentID} onClick={scrollTop}>
 
                         <div className="row">
                             <div className="col-lg-5 d-flex align-items-center">
@@ -73,7 +73,7 @@ export default function HealthTalk() {
                             List2.map((list, i) => {
                                 return (
                                     <div className="CommonLeadList" key={i}>
-                                        <Link to={"/details/" + list.Slug + "/" + list.ContentID} onClick={scrollTop}>
+                                        <Link to={"/" + list.Slug + "/" + list.ContentID} onClick={scrollTop}>
                                             <div className="row">
                                                 <div className="col-lg-6 col-5">
                                                     <div className="Imgresize">
@@ -105,7 +105,7 @@ export default function HealthTalk() {
                             List3.map((list) => {
                                 return (
                                     <div className="CommonLeadList">
-                                        <Link to={"/details/" + list.Slug + "/" + list.ContentID} onClick={scrollTop}>
+                                        <Link to={"/" + list.Slug + "/" + list.ContentID} onClick={scrollTop}>
                                             <div className="row">
                                                 <div className="col-lg-6 col-5">
                                                     <div className="Imgresize">

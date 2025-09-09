@@ -539,7 +539,7 @@ app.get('/bangla-news-sitemap.xml', async function (request, response) {
                     : result[i].fcreated_at;
 
                 xml += `<url>
-                    <loc>${FEndUrl}/details/${result[i].CategorySlug}/${result[i].ContentID}</loc>
+                    <loc>${FEndUrl}/${result[i].CategorySlug}/${result[i].ContentID}</loc>
                     <news:news>
                         <news:publication>
                             <news:name>দেশকালনিউজ</news:name>
@@ -724,8 +724,8 @@ app.get('/rss/rss.xml', async function (request, response) {
                 xml += `<item>
           <title><![CDATA[ ${title} ]]></title>
           <description><![CDATA[ ${desc} ]]></description>
-          <link>${FEndUrl}/details/${row.CategorySlug}/${row.ContentID}</link>
-          <guid isPermaLink="true">${FEndUrl}/details/${row.CategorySlug}/${row.ContentID}</guid>
+          <link>${FEndUrl}/${row.CategorySlug}/${row.ContentID}</link>
+          <guid isPermaLink="true">${FEndUrl}/${row.CategorySlug}/${row.ContentID}</guid>
           <pubDate>${pubDate}</pubDate>
           <media:content medium="image" width="800" height="450" url="${CDNUrl}/media/${row.ImageBgPath}"/>
         </item>`;
@@ -994,7 +994,7 @@ app.get('/bangla-sitemap/:dailysitemap', async function (request, response) {
                     let moddate = new Date(lastmoddate);
 
                     xml += `<url>
-    <loc>${FEndUrl}/details/${result[i].CategorySlug}/${result[i].ContentID}</loc>
+    <loc>${FEndUrl}/${result[i].CategorySlug}/${result[i].ContentID}</loc>
     <image:image>
         <image:loc>${CDNUrl}/${result[i].ImageBgPath}</image:loc>
         <image:caption>
@@ -1561,7 +1561,7 @@ app.get('/:catSlug/:subCatSlug', async function (request, response) {
         });
     }
 });
-app.get('/details/:catSlug/:id', async function (request, response) {
+app.get('/:catSlug/:id', async function (request, response) {
     let catSlug = request.params.catSlug;
     let id = request.params.id;
     console.log('Detail page visited!' + catSlug + ' ' + id);

@@ -39,7 +39,7 @@ export default function SpecialReport() {
                             return (
                                 <div className="col-lg-4 d-flex" key={i}>
                                     <div className="CommonLead">
-                                        <Link to={"/details/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
+                                        <Link to={"/" + nc.Slug + "/" + nc.ContentID} onClick={scrollTop}>
                                             <div className="row">
                                                 <div className="col-lg-12 Imgresize">
                                                     <picture>

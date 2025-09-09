@@ -83,7 +83,7 @@ export default function Opinion() {
                     {Lists.map((list, index) => (
                         <div key={index} className="items border-right-inner">
                             <div className="opinion-list">
-                                <Link to={`/details/${list.Slug}/${list.ContentID}`} onClick={scrollTop}>
+                                <Link to={`/${list.Slug}/${list.ContentID}`} onClick={scrollTop}>
                                     <div className="row">
                                         <div className="col-lg-5 col-5 Imgresize">
                                             {list.WriterImagePath ?

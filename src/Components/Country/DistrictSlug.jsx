@@ -97,7 +97,7 @@ export default function DistrictSlug() {
                                                     <div className="col-lg-6 col-sm-12" key={nc.ContentID}>
                                                         <div className="Division-panel">
                                                             <div className="DistrictListNews">
-                                                                <Link rel="preload" as="image" to={"/details/country" + "/" + nc.ContentID} onClick={scrollTop}>
+                                                                <Link rel="preload" as="image" to={"/country" + "/" + nc.ContentID} onClick={scrollTop}>
                                                                     <div className="row">
                                                                         <div className="col-lg-5 col-sm-4 col-5 card-video-part">
                                                                             <div className="DImgZoomBlock">
