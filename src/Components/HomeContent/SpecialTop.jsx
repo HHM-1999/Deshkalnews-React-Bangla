@@ -5,14 +5,14 @@ import { FaPlay } from "react-icons/fa";
 import { ForLazyLoaderImg, scrollTop } from "../AllFunctions";
 import { Link } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
-import eventBanner from '../../assets/media/common/dakso-nirbachon.png'
+// import eventBanner from '../../assets/media/common/dakso-nirbachon.png'
 // import CricketSeries from '../../assets/media/common/cricket-series.jpg';
 var lazyloaded = false
-var limit = 2
+// var limit = 2
 export default function SpecialTop() {
     const [LeadSpecial1, setLeadSpecial1] = useState([])
     const [LeadSpecial2, setLeadSpecial2] = useState([])
-    const [tagsRelatedNews, setTagsRelatedNews] = useState([]);
+    // const [tagsRelatedNews, setTagsRelatedNews] = useState([]);
 
     try {
 
@@ -22,25 +22,25 @@ export default function SpecialTop() {
                 .then(({ data }) => {
                     if (data.length > 0) {
                         setLeadSpecial1(data[0]);
-                        setLeadSpecial2(data.slice(1, 2))
+                        setLeadSpecial2(data.slice(1, 4))
                         setTimeout(function () {
                             lazyloaded = false
                             ForLazyLoaderImg(lazyloaded)
                         }, 1000);
                     }
                 });
-            const formData = { 'slug': "ডাকসু নির্বাচন ", 'limit': limit, 'offset': 0 }
-            axios
-                .post(`${process.env.REACT_APP_API_URL}tag-content`, formData)
-                .then(({ data }) => {
-                    if (data.tag_contents) {
-                        setTagsRelatedNews(data.tag_contents);
-                        setTimeout(function () {
-                            lazyloaded = false
-                            ForLazyLoaderImg(lazyloaded)
-                        }, 1000);
-                    }
-                });
+            // const formData = { 'slug': "ডাকসু নির্বাচন ", 'limit': limit, 'offset': 0 }
+            // axios
+            //     .post(`${process.env.REACT_APP_API_URL}tag-content`, formData)
+            //     .then(({ data }) => {
+            //         if (data.tag_contents) {
+            //             setTagsRelatedNews(data.tag_contents);
+            //             setTimeout(function () {
+            //                 lazyloaded = false
+            //                 ForLazyLoaderImg(lazyloaded)
+            //             }, 1000);
+            //         }
+            //     });
         }, [])
 
 
@@ -49,7 +49,7 @@ export default function SpecialTop() {
 
 
                 {/* Short Event Section */}
-                <div className="short-event">
+                {/* <div className="short-event">
                     <Link to={"/tags/ডাকসু নির্বাচন"}>
                         <div className="banner-area">
                             <img src={eventBanner} alt="Deshkalnews.com" title='Deshkalnews.com' className='img-fluid' />
@@ -91,7 +91,7 @@ export default function SpecialTop() {
                         })}</div>
 
 
-                </div>
+                </div> */}
                 <div className="leadTop3">
                     <div className="Common-list">
                         {LeadSpecial1.ShowLiveBlog === 2 && LeadSpecial1.LiveBlogStatus === 2 ?

@@ -10,7 +10,7 @@ export default function LatestLdJson() {
                     "@context": "https://schema.org",
                     "@type": "CollectionPage",
                     "name": "আজকের সর্বশেষ খবর, ব্রেকিং নিউজ | Latest news, Breaking news | DeshkalNews.com",
-                    "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}latest",
+                    "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/latest",
                     "breadcrumb": {
                         "@type": "BreadcrumbList",
                         "itemListElement": [
@@ -18,13 +18,13 @@ export default function LatestLdJson() {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Home",
-                                "item": "${process.env.REACT_APP_FONT_DOMAIN_URL}"
+                                "item": "${process.env.REACT_APP_FONT_DOMAIN_URL}bangla"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Latest",
-                                "item": "${process.env.REACT_APP_FONT_DOMAIN_URL}latest"
+                                "item": "${process.env.REACT_APP_FONT_DOMAIN_URL}bangla/latest"
                             }
                         ]
                     }

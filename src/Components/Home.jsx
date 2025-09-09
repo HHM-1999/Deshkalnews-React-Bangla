@@ -74,12 +74,10 @@ export default function Home() {
                                 <VideoLead />
                             </div>
                             <div className="col-lg-3">
-
                                 <div className="MblHide">
                                     <Interview />
                                 </div>
                                 <div className="MblShow">
-
                                     <PoliticsMobile />
                                 </div>
                             </div>
@@ -90,7 +88,6 @@ export default function Home() {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6 border-right-inner">
-
                                 <div className="MblHide">
                                     <Politics />
                                 </div>
