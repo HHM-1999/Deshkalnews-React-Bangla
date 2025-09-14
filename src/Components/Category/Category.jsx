@@ -135,7 +135,7 @@ export default function Category() {
                                     <div className="col-lg-8 col-12 d-flex ">
                                         <div className="DCatLeadTop">
                                             {catLeadNews1 && (
-                                                <Link rel="preload" as="image" to={`"/" + ${catLeadNews1.Slug}/${catLeadNews1.ContentID}`} onClick={scrollTop}>
+                                                <Link rel="preload" as="image" to={`/${catLeadNews1.Slug}/${catLeadNews1.ContentID}`} onClick={scrollTop}>
                                                     <div className="row">
                                                         <div className="col-lg-8 col-12">
                                                             <div className="DImgZoomBlock">

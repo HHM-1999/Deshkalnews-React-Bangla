@@ -9,15 +9,16 @@ import SubCatLdJson from './SubCatLdJson';
 export default function SubCategory() {
     let { catSlug, subCatSlug } = useParams();
 
-    const [CatName, setCatName] = useState([]);
-    const [CatSlug, setCatSlug] = useState([]);
-    const [subCatName, setSubCatName] = useState([]);
+    const [CatName, setCatName] = useState(null);
+    const [CatSlug, setCatSlug] = useState(null);
+    const [subCatName, setSubCatName] = useState(null);
     const [catLeadNews1, setcatLeadNews1] = useState(null);
     const [catLeadNews2, setcatLeadNews2] = useState(null);
     const [catLeadNews3, setcatLeadNews3] = useState([]);
     const [catNewsMore, setcatLeadMore] = useState([]);
     const [news, setNews] = useState([]);
     const [showMore, setShowMore] = useState(true);
+    const [isDataFetched, setIsDataFetched] = useState(false);
 
     const offsetRef = useRef(0);
     const limit = 8;
@@ -26,23 +27,29 @@ export default function SubCategory() {
 
     useEffect(() => {
         offsetRef.current = 0;
+        setIsDataFetched(false);
+
         axios.get(`${process.env.REACT_APP_API_URL}sub-categorys/${catSlug}/${encodeURIComponent(subCatSlug)}`)
             .then(({ data }) => {
                 if (data.subCategories.Slug === subCatSlug) {
-                    SubcatIDRef.current = data.subCategories.CategoryID;
-                    setCatSlug(data.subCategories.Slug);
-                    setCatName(data.subCategories.CategoryName);
-                    setSubCatName(data.subCategories);
+                    const subcat = data.subCategories;
+                    SubcatIDRef.current = subcat.CategoryID;
+
+                    setCatSlug(subcat.Slug);
+                    setCatName(subcat.CategoryName);
+                    setSubCatName(subcat);
 
                     axios.get(`${process.env.REACT_APP_API_URL}inner-sub-category-content/${SubcatIDRef.current}/${LeadNewsLimit}`)
                         .then(({ data }) => {
                             if (data.inner_subcategory_content) {
-                                setcatLeadNews1(data.inner_subcategory_content[0]);
-                                setcatLeadNews2(data.inner_subcategory_content[1]);
-                                setcatLeadNews3(data.inner_subcategory_content.slice(2, 5));
-                                setNews(data.inner_subcategory_content);
+                                const leadNews = data.inner_subcategory_content;
 
-                                const top_content_ids = data.inner_subcategory_content.map(el => el.ContentID);
+                                setcatLeadNews1(leadNews[0] || null);
+                                setcatLeadNews2(leadNews[1] || null);
+                                setcatLeadNews3(leadNews.slice(2, 5));
+                                setNews(leadNews);
+
+                                const top_content_ids = leadNews.map(el => el.ContentID);
                                 const formData = {
                                     category_id: SubcatIDRef.current,
                                     limit,
@@ -57,13 +64,20 @@ export default function SubCategory() {
                                             setShowMore(data.data.length >= limit);
                                             setTimeout(() => ForLazyLoaderImg(false), 1000);
                                         }
-                                    });
+                                        setIsDataFetched(true);
+                                    })
+                                    .catch(() => setIsDataFetched(true));
+                            } else {
+                                setIsDataFetched(true);
                             }
-                        });
+                        })
+                        .catch(() => setIsDataFetched(true));
                 } else {
                     setCatName(null);
+                    setIsDataFetched(true);
                 }
-            });
+            })
+            .catch(() => setIsDataFetched(true));
     }, [catSlug, subCatSlug]);
 
     const toggleButtonState = (e) => {
@@ -83,7 +97,7 @@ export default function SubCategory() {
                 if (data.data && data.data.length > 0) {
                     const updatedNews = [...news, ...data.data];
                     setNews(updatedNews);
-                    setcatLeadMore(updatedNews.filter((n, index) => index >= 5));
+                    setcatLeadMore(updatedNews.slice(5));
                     setShowMore(data.data.length >= limit);
                     setTimeout(() => ForLazyLoaderImg(false), 1000);
                 } else {
@@ -92,9 +106,13 @@ export default function SubCategory() {
             });
     };
 
+    if (!isDataFetched) {
+        // You can return a loader here instead of null
+        return <div className="text-center my-5">Loading...</div>;
+    }
     return (
         <>
-            {CatName ? (
+            {CatName && subCatName  ? (
                 <main>
                     <div className="container">
                         <h1 className="DTitle">
@@ -140,7 +158,7 @@ export default function SubCategory() {
                                         <div className="col-lg-4 col-12 d-flex">
                                             <div className="DCatTop2 align-self-stretch">
                                                 {catLeadNews2 && (
-                                                    <Link to={`/${catSlug}/${catLeadNews2.ContentID}`} onClick={scrollTop}>
+                                                    <Link to={`/details/${catSlug}/${catLeadNews2.ContentID}`} onClick={scrollTop}>
                                                         <div className="row">
                                                             <div className="col-lg-12 col-sm-4 col-5">
                                                                 <div className="DImgZoomBlock">
@@ -170,7 +188,7 @@ export default function SubCategory() {
                                             {catLeadNews3.map((nc) => (
                                                 <div className="col-lg-4 col-12 d-flex border-right-inner" key={nc.ContentID}>
                                                     <div className="DCatTop3tList align-self-stretch">
-                                                        <Link to={`/${catSlug}/${nc.ContentID}`} onClick={scrollTop}>
+                                                        <Link to={`/details/${catSlug}/${nc.ContentID}`} onClick={scrollTop}>
                                                             <div className="row">
                                                                 <div className="col-lg-12 col-sm-4 col-5">
                                                                     <div className="DImgZoomBlock">
@@ -211,7 +229,7 @@ export default function SubCategory() {
                                             {catNewsMore.map((nc) => (
                                                 <div className="col-lg-6 col-12 d-flex" key={nc.ContentID}>
                                                     <div className="DCatNewsList align-self-stretch">
-                                                        <Link to={`/${catSlug}/${nc.ContentID}`} onClick={scrollTop}>
+                                                        <Link to={`/details/${catSlug}/${nc.ContentID}`} onClick={scrollTop}>
                                                             <div className="row">
                                                                 <div className="col-lg-5 col-sm-4 col-5">
                                                                     <div className="DImgZoomBlock">

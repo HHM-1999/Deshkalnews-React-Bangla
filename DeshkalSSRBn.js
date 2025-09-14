@@ -52,7 +52,7 @@ const mediaConfig = dbConfig.mediaConfig();
 // const genConfig = dbConfig.genConfig();
 
 var FEndPort = 3600;
-var FEndUrl = 'https://www.deshkalnews.com';
+var FEndUrl = 'https://www.bangla.deshkalnews.com';
 var BEndUrl = 'https://backoffice.deshkalnews.com';
 var CDNUrl = 'https://assets.deshkalnews.com';
 
@@ -1490,7 +1490,7 @@ app.get('/photo/:photoID', async function (request, response) {
     }
 });
 
-app.get('/:catSlug/:subCatSlug', async function (request, response) {
+app.get('/:catSlug/sub/:subCatSlug', async function (request, response) {
     let catSlug = request.params.catSlug;
     let subCatSlug = request.params.subCatSlug;
     console.log('sub Category page visited! ' + catSlug + '/' + subCatSlug);
