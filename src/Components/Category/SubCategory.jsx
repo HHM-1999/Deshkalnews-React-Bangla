@@ -108,7 +108,7 @@ export default function SubCategory() {
 
     if (!isDataFetched) {
         // You can return a loader here instead of null
-        return <div className="text-center my-5">Loading...</div>;
+        return <div className="text-center my-5"></div>;
     }
     return (
         <>
@@ -158,7 +158,7 @@ export default function SubCategory() {
                                         <div className="col-lg-4 col-12 d-flex">
                                             <div className="DCatTop2 align-self-stretch">
                                                 {catLeadNews2 && (
-                                                    <Link to={`/details/${catSlug}/${catLeadNews2.ContentID}`} onClick={scrollTop}>
+                                                    <Link to={`/${catSlug}/${catLeadNews2.ContentID}`} onClick={scrollTop}>
                                                         <div className="row">
                                                             <div className="col-lg-12 col-sm-4 col-5">
                                                                 <div className="DImgZoomBlock">
@@ -188,7 +188,7 @@ export default function SubCategory() {
                                             {catLeadNews3.map((nc) => (
                                                 <div className="col-lg-4 col-12 d-flex border-right-inner" key={nc.ContentID}>
                                                     <div className="DCatTop3tList align-self-stretch">
-                                                        <Link to={`/details/${catSlug}/${nc.ContentID}`} onClick={scrollTop}>
+                                                        <Link to={`/${catSlug}/${nc.ContentID}`} onClick={scrollTop}>
                                                             <div className="row">
                                                                 <div className="col-lg-12 col-sm-4 col-5">
                                                                     <div className="DImgZoomBlock">
@@ -229,7 +229,7 @@ export default function SubCategory() {
                                             {catNewsMore.map((nc) => (
                                                 <div className="col-lg-6 col-12 d-flex" key={nc.ContentID}>
                                                     <div className="DCatNewsList align-self-stretch">
-                                                        <Link to={`/details/${catSlug}/${nc.ContentID}`} onClick={scrollTop}>
+                                                        <Link to={`/${catSlug}/${nc.ContentID}`} onClick={scrollTop}>
                                                             <div className="row">
                                                                 <div className="col-lg-5 col-sm-4 col-5">
                                                                     <div className="DImgZoomBlock">

@@ -29,7 +29,7 @@ export default function Kobita() {
                 <div className="row">
                     <div className="col-12">
                         <div className="section-heading">
-                            <h2><i className="fa-solid fa-chevron-right"></i><Link to='/literature/poetry'>কবিতা</Link></h2>
+                            <h2><i className="fa-solid fa-chevron-right"></i><Link to='/literature/sub/poetry'>কবিতা</Link></h2>
                         </div>
                     </div>
                 </div>

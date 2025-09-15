@@ -207,7 +207,7 @@ span.publishTime {
 	box-shadow: 0 0 5px 0 #ccc;
 }
 
-.DSpeEventTitle2 h5 {
+.DSpeEventTitle2 h1 {
 	text-align: center;
 	/* font-size: 22px; */
 	/* font-weight: bold; */
@@ -1221,8 +1221,28 @@ a.close-search {
 		/*"Noto Serif Bengali"*/
 	;
 }
+/* .menu-right-item.en {
+	font-family: 'Roboto', sans-serif !important;
+} */
+
 .menu-right-item.en {
 	font-family: 'Roboto', sans-serif !important;
+	background: #191919;
+	border-radius: 5px;
+	border: 1px solid #121212;
+	padding: 2px 6px;
+}
+.menu-right-item.en a {
+	color: #fff;
+	font-size: 14px;
+}
+.menu-right-item.en a i {
+	color: #fff;
+	font-size: 13px;
+}
+
+.menu-right-item.en a:hover {
+	color: #ccc;
 }
 .sticky .woodmart-logo.woodmart-sticky-logo {
 	display: block;
@@ -4708,11 +4728,16 @@ img.Writer-img {
 }
 
 .DVideoTop2InnerList .Desc .Title {
-	font-size: 19px;
+	font-size: 18px;
 	font-weight: 600;
-	line-height: 26px;
+	line-height: 25px;
 	margin-bottom: 0;
 	padding-left: 2px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 
 }
 

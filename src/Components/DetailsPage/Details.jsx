@@ -358,8 +358,11 @@ export default function Details() {
                     <div className="container">
                         {state ? <Ldjson news={state} catName={catName} catSlug={catSlug} DisplayCatName={DisplayCatName} /> : ""}
                         <DocumentTitle title={heading} />
-                        {!LeadData ?
-                            <div className="live-title-wrap"></div> :
+                        {LeadData === null ? (   // still loading
+                            <div className="live-title-wrap mt-2">
+                                <h3 className="liveTitle"></h3>
+                            </div>
+                        ) : LeadData && LeadData.length > 0 ? (   // has data
                             <div className="live-title-wrap mt-2">
                                 <div className="LiveButton-title">
                                     <div className="LiveButton">
@@ -371,7 +374,8 @@ export default function Details() {
                                     </h3>
                                 </div>
                             </div>
-                        }
+                        ) : null}
+
                         <section>
                             <div className="row d-print-none">
                                 <div className="col-lg-12 col-12 my-2">
@@ -577,7 +581,16 @@ export default function Details() {
                                         <div className=" mb-2  mt-4 d-contents d-sm-flex justify-content-between align-items-center d-print-none">
                                             <div>
                                                 <DWriters news={state} />
-                                                <p className="pDate "><span>প্রকাশিত:</span> {formatDateToBengali24(state.created_at)}</p>
+                                                <p className="pDate">
+                                                    {state.created_at && (
+                                                        <>
+                                                            <span>প্রকাশিত: </span>
+                                                            {formatDateToBengali24(state.created_at)}
+                                                        </>
+                                                    )}
+                                                </p>
+
+
                                             </div>
                                             <div className='d-flex PRINTBTN mb-2'>
                                                 <p className="DTopImgCaption" style={{ paddingRight: '10px', paddingTop: '10px' }}></p>

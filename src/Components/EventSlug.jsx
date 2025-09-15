@@ -92,7 +92,7 @@ export default function EventSlug() {
                     <div className="container">
                         <div className="TopHomeSection"></div>
                         <div className="DTagLead">
-                            <DocumentTitle title={EventSlug} />
+                            <DocumentTitle title={eventName.EventTitle} />
                             <div className="row">
                                 <div className="col-sm-12">
                                     <div className="DSpeEventTitle2">
@@ -154,7 +154,7 @@ export default function EventSlug() {
                                 {tagsRelatedNews.map((nc, i) => (
                                     <div className="col-lg-6 col-sm-12" key={i}>
                                         <div className="archiveListNews">
-                                            <Link rel="preload" as="image" to={`'/'+ ${nc.categorySlug}/${nc.ContentID}`} onClick={scrollTop}>
+                                            <Link rel="preload" as="image" to={`/${nc.categorySlug}/${nc.ContentID}`} onClick={scrollTop}>
                                                 <div className="row">
                                                     <div className="col-sm-4 col-5 card-video-part">
                                                         <div className="DImgZoomBlock">

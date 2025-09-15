@@ -52,7 +52,7 @@ export default function EducationCampus() {
                         <div className="multiple-subcat-title">
                             {SubcatName.map((nc, i) => {
                                 return (
-                                    <Link to={`/education/${nc.Slug}`} onClick={scrollTop} key={i}>{nc.CategoryName}</Link>
+                                    <Link to={`/education/sub/${nc.Slug}`} onClick={scrollTop} key={i}>{nc.CategoryName}</Link>
                                 )
                             })}
 

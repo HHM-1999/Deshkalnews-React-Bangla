@@ -47,7 +47,7 @@ var httpServer = http.createServer(app);
 
 const dbConfig = require("./ssr/dbCon/dbConfig");
 const bnConfig = dbConfig.bnConfig();
-const enConfig = dbConfig.enConfig();
+// const enConfig = dbConfig.enConfig();
 const mediaConfig = dbConfig.mediaConfig();
 // const genConfig = dbConfig.genConfig();
 
@@ -81,8 +81,6 @@ app.get('/', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
 
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'DeshKalNews.com | বাংলাদেশ ও বিশ্ব সংবাদ | সর্বশেষ খবর');
@@ -104,9 +102,6 @@ app.get('/archives', function (request, response) {
         if (err) {
             return console.log(err);
         }
-
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'আর্কাইভ | পুরনো সব গুরুত্বপূর্ণ খবর ও রেকর্ড');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকাল নিউজের সংরক্ষিত পুরনো সব প্রতিবেদন এক জায়গায়");
@@ -127,8 +122,6 @@ app.get('/latest', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'আজকের সর্বশেষ খবর, ব্রেকিং নিউজ | Latest news, Breaking news | DeshkalNews.com');
         data = data.replace(/\$OG_DESCRIPTION/g, "Read today's breaking news of Bangladesh on politics, sports, business, entertainment, weather, lifestyle, education, tourism, and latest bd news leading Bangla News portal Deshkal News");
@@ -149,8 +142,7 @@ app.get('/tags', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: ট্যাগ সমূহ');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: ট্যাগ সমূহ");
@@ -164,7 +156,6 @@ app.get('/tags', function (request, response) {
         response.send(data);
     });
 });
-
 app.get('/writers', function (request, response) {
     console.log('writers page visited!');
     const filePath = path.resolve(__dirname, './build', 'index.html');
@@ -172,8 +163,7 @@ app.get('/writers', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: লেখক সমূহ');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: লেখক সমূহ");
@@ -197,8 +187,7 @@ app.get('/videos', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: ভিডিও গ্যালারী');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: ভিডিও গ্যালারী");
@@ -220,8 +209,7 @@ app.get('/photo', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'ছবিতে সংবাদ | ফটোজার্নালিজম ও চিত্র প্রতিবেদন');
         data = data.replace(/\$OG_DESCRIPTION/g, "খবরকে জীবন্ত করে তুলেছে আমাদের তোলা ছবিগুলো");
@@ -244,8 +232,7 @@ app.get('/staff-member', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: স্টাফ');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: স্টাফ");
@@ -267,8 +254,7 @@ app.get('/privacy-policy', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: Privacy Policy');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: Privacy Policy");
@@ -290,8 +276,7 @@ app.get('/terms-service', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: Terms & Conditions');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: Terms & Conditions");
@@ -313,8 +298,7 @@ app.get('/contact-us', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: যোগাযোগ');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: যোগাযোগ");
@@ -337,8 +321,6 @@ app.get('/advertise', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: Advertisement');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: Advertisement");
@@ -361,8 +343,6 @@ app.get('/about', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: About');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: About");
@@ -387,8 +367,6 @@ app.get('/ads.txt', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
         response.send(data);
     });
 });
@@ -401,8 +379,7 @@ app.get('/google7e2046947495bf19.html', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         response.send(data);
     });
 });
@@ -448,30 +425,20 @@ app.get('/sitemap.xml', function (request, response) {
     let xml = `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <sitemap>
             <loc>${FEndUrl}/bangla-sitemap.xml</loc>
-        </sitemap>
-        <sitemap>
-            <loc>${FEndUrl}/english-sitemap.xml</loc>
-        </sitemap>`
+        </sitemap>        
+        `
     var todate = new Date()
     xml += `<sitemap>
-        <loc>${FEndUrl}/bangla-sitemap/sitemap-daily-${todate.getFullYear()}-${todate.getMonth() < 9 ? '0' + (todate.getMonth() + 1) : todate.getMonth() + 1}-${todate.getDate() < 10 ? '0' + todate.getDate() : todate.getDate()}.xml</loc>
-        <lastmod>${todate.toISOString()}</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>${FEndUrl}/english-sitemap/sitemap-daily-${todate.getFullYear()}-${todate.getMonth() < 9 ? '0' + (todate.getMonth() + 1) : todate.getMonth() + 1}-${todate.getDate() < 10 ? '0' + todate.getDate() : todate.getDate()}.xml</loc>
-        <lastmod>${todate.toISOString()}</lastmod>
-    </sitemap>`
+                <loc>${FEndUrl}/bangla-sitemap/sitemap-daily-${todate.getFullYear()}-${todate.getMonth() < 9 ? '0' + (todate.getMonth() + 1) : todate.getMonth() + 1}-${todate.getDate() < 10 ? '0' + todate.getDate() : todate.getDate()}.xml</loc>
+                <lastmod>${todate.toISOString()}</lastmod>
+            </sitemap>`
     todate.setHours(23, 59, 59, 999)
     for (let i = 0; i < 30; i++) {
         todate.setDate(todate.getDate() - 1)
         xml += `<sitemap>
-            <loc>${FEndUrl}/bangla-sitemap/sitemap-daily-${todate.getFullYear()}-${todate.getMonth() < 9 ? '0' + (todate.getMonth() + 1) : todate.getMonth() + 1}-${todate.getDate() < 10 ? '0' + todate.getDate() : todate.getDate()}.xml</loc>
-            <lastmod>${todate.toISOString()}</lastmod>
-        </sitemap>
-        <sitemap>
-            <loc>${FEndUrl}/english-sitemap/sitemap-daily-${todate.getFullYear()}-${todate.getMonth() < 9 ? '0' + (todate.getMonth() + 1) : todate.getMonth() + 1}-${todate.getDate() < 10 ? '0' + todate.getDate() : todate.getDate()}.xml</loc>
-            <lastmod>${todate.toISOString()}</lastmod>
-        </sitemap>`
+                    <loc>${FEndUrl}/bangla-sitemap/sitemap-daily-${todate.getFullYear()}-${todate.getMonth() < 9 ? '0' + (todate.getMonth() + 1) : todate.getMonth() + 1}-${todate.getDate() < 10 ? '0' + todate.getDate() : todate.getDate()}.xml</loc>
+                    <lastmod>${todate.toISOString()}</lastmod>
+                </sitemap>`
     }
     for (let i = 0; i < 70; i++) {
         xml += `<sitemap>
@@ -479,12 +446,12 @@ app.get('/sitemap.xml', function (request, response) {
             <lastmod>${todate.toISOString()}</lastmod>
         </sitemap>`
     }
-    for (let i = 0; i < 16; i++) {
-        xml += `<sitemap>
-            <loc>${FEndUrl}/sitemap-en/sitemap-en-${i + 1}.xml</loc>
-            <lastmod>${todate.toISOString()}</lastmod>
-        </sitemap>`
-    }
+    // for (let i = 0; i < 16; i++) {
+    //     xml += `<sitemap>
+    //         <loc>${FEndUrl}/sitemap-en/sitemap-en-${i + 1}.xml</loc>
+    //         <lastmod>${todate.toISOString()}</lastmod>
+    //     </sitemap>`
+    // }
     xml += `</sitemapindex>`;
     response.send(xml);
 });
@@ -588,7 +555,7 @@ app.get('/:catSlug', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 // Replace meta placeholders
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${displayTitle}`);
@@ -610,7 +577,7 @@ app.get('/:catSlug', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `noindex, nofollow`);
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
@@ -633,7 +600,7 @@ app.get('/:catSlug', async function (request, response) {
                 return console.log(err);
             }
             // ✅ Set language for Bangla site
-            data = data.replace(/\$HTML_LANG/g, "bn");
+
             data = data.replace(/\$OG_ROBOTS/g, `noindex, nofollow`);
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
@@ -1035,7 +1002,7 @@ app.get('/search/:searchSlug', function (request, response) {
             return console.log(err);
         }
         // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
+
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
         data = data.replace(/\$OG_TITLE/g, 'খুঁজুন | খুঁজুন সর্বশেষ খবর :: দেশকালনিউজ.কম');
         data = data.replace(/\$OG_DESCRIPTION/g, "খুঁজুন | খুঁজুন সর্বশেষ খবর :: দেশকালনিউজ.কম");
@@ -1067,7 +1034,7 @@ app.get('/tags/:TagTitle', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
@@ -1136,7 +1103,7 @@ app.get('/writers/:WriterSlug', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
@@ -1205,7 +1172,7 @@ app.get('/divisions/:divisionSlug', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
@@ -1277,7 +1244,7 @@ app.get('/videos/:vdoID', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${description}`);
@@ -1349,7 +1316,7 @@ app.get('/events/:EventSlug', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
@@ -1434,7 +1401,7 @@ app.get('/photo/:photoID', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${description}`);
@@ -1508,8 +1475,6 @@ app.get('/:catSlug/sub/:subCatSlug', async function (request, response) {
                 if (err) {
                     return console.log(err);
                 }
-                // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
@@ -1598,7 +1563,7 @@ app.get('/:catSlug/:id', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${description}`);
@@ -1617,7 +1582,7 @@ app.get('/:catSlug/:id', async function (request, response) {
                     return console.log(err);
                 }
                 // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `noindex, nofollow`);
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
@@ -1640,7 +1605,7 @@ app.get('/:catSlug/:id', async function (request, response) {
                 return console.log(err);
             }
             // ✅ Set language for Bangla site
-            data = data.replace(/\$HTML_LANG/g, "bn");
+
             data = data.replace(/\$OG_ROBOTS/g, `noindex, nofollow`);
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
@@ -1673,8 +1638,7 @@ app.get('/divisions/:divisionSlug/:districtSlug', async function (request, respo
                 if (err) {
                     return console.log(err);
                 }
-                // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
+
                 data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
@@ -1692,8 +1656,6 @@ app.get('/divisions/:divisionSlug/:districtSlug', async function (request, respo
                 if (err) {
                     return console.log(err);
                 }
-                // ✅ Set language for Bangla site
-                data = data.replace(/\$HTML_LANG/g, "bn");
                 data = data.replace(/\$OG_ROBOTS/g, `noindex, nofollow`);
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
@@ -1714,8 +1676,6 @@ app.get('/divisions/:divisionSlug/:districtSlug', async function (request, respo
             if (err) {
                 return console.log(err);
             }
-            // ✅ Set language for Bangla site
-            data = data.replace(/\$HTML_LANG/g, "bn");
             data = data.replace(/\$OG_ROBOTS/g, `noindex, nofollow`);
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
@@ -1742,9 +1702,6 @@ app.get('*', function (request, response) {
         if (err) {
             return console.log(err);
         }
-        // ✅ Set language for Bangla site
-        data = data.replace(/\$HTML_LANG/g, "bn");
-
         data = data.replace(/\$OG_ROBOTS/g, `noindex, nofollow`);
         data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
         data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);

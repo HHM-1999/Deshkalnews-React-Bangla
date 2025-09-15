@@ -20,11 +20,13 @@ export default function DWriters({ news }) {
 
     return (
         <div className="WritterName mb-1">
+
             <p>
                 <Link to={`/writers/${slugs}`} onClick={scrollTop}>
-                    <TiPencil /> {writerNames}
+                    {writerNames && <><TiPencil /> {writerNames} </>}
                 </Link>
             </p>
+
         </div>
     );
 }

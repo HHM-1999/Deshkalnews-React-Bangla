@@ -50,7 +50,7 @@ export default function SubcatNames() {
                                     </li>
                                 ))
                             ) : (
-                                <li>Loading...</li> // fallback
+                               " "
                             )}
                         </ul>
                     </div>

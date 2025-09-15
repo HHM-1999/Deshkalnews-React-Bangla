@@ -51,7 +51,7 @@ export default function MainRouterLink() {
                 <Route path="/divisions/:divisionSlug/:districtSlug" element={<DistrictSlug />} />
                 <Route path="/videos/:vdoID" element={<VideoDetails />} />
 
-                <Route path="/live/details/:catSlug/:id" element={<LiveDetails />} />
+                <Route path="/live/:catSlug/:id" element={<LiveDetails />} />
                 <Route path="/photo/" element={<PhotoGallery />} />
                 <Route path="/photo/:AlbumID" element={<DetailsPhotoFeature />} />
                 <Route path="/tags/:TagTitle" element={<TagPage />} />

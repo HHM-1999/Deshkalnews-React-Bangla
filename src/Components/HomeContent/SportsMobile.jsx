@@ -60,7 +60,7 @@ export default function SportsMobile() {
                         <div className="multiple-subcat-title">
                             {SubcatName.map((nc, i) => {
                                 return (
-                                    <Link to={`/sports/${nc.Slug}`} onClick={scrollTop} key={i}>{nc.CategoryName}</Link>
+                                    <Link to={`/sports/sub/${nc.Slug}`} onClick={scrollTop} key={i}>{nc.CategoryName}</Link>
                                 )
                             })}
 

@@ -50,7 +50,7 @@ export default function FeatureMobile() {
                             <div className="multiple-subcat-title">
                                 {SubcatName.map((nc, i) => {
                                     return (
-                                        <Link to={`/feature/${nc.Slug}`} onClick={scrollTop} key={i}>{nc.CategoryName}</Link>
+                                        <Link to={`/feature/sub/${nc.Slug}`} onClick={scrollTop} key={i}>{nc.CategoryName}</Link>
                                     )
                                 })}
 
