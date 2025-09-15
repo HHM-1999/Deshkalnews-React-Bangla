@@ -414,7 +414,7 @@ app.get('/robots.txt', function (request, response) {
     // for (let i = 0; i < 16; i++) {
     //     xml += `Sitemap: ${FEndUrl}/sitemap-en/sitemap-en-${i + 1}.xml\n`
     // }
-    xml += `Sitemap: ${FEndUrl}/bangla-news-sitemap.xml\nSitemap: ${FEndUrl}/english-news-sitemap.xml\n`
+    xml += `Sitemap: ${FEndUrl}/bangla-news-sitemap.xml\n`
     response.send(xml);
 });
 
