@@ -17,7 +17,7 @@ import favicon from '../../assets/media/common/favicon.png'
 import { toBengaliNumber } from 'bengali-number'
 import innerAds from '../../assets/media/Advertisement/300 x250 - Details.jpg'
 // import topAds from '../../assets/media/Advertisement/970 x 90 -details.jpg'
-import Ads from '../../assets/media/Advertisement/300 x250 - Details.jpg';
+    import Ads from '../../assets/media/Advertisement/300 x250 - Details.jpg';
 var lazyloaded = false
 var dateArray = []
 var allTags
@@ -39,12 +39,11 @@ export default function Details() {
     const [state, setState] = useState([])
     const [catLatest, setCatLatest] = useState([])
     const [catPopular, setCatPopular] = useState([])
-    const [writer, setWriter] = useState([]);
     const [heading, setHeading] = useState([]);
     const [openIndex, setOpenIndex] = useState(null);
-    // const [loading, setLoading] = useState(true);
     const [fontSize, setFontSize] = useState(20);
     const PrintAble = () => { window.print(); };
+    
     useEffect(() => {
         // document.querySelectorAll('link[rel="canonical"]')[0].setAttribute('href', window.location.href)
         // document.querySelectorAll('link[rel="canonical"]')[0].setAttribute('href', window.location.href)

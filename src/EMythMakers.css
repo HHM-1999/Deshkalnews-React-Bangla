@@ -1927,9 +1927,16 @@ span.mvp-feat1-pop-head {
 	font-family: 'SolaimanLipi' !important;
 }
 
-.contact-details {
+.contact-details .others-area{
 	padding-bottom: 20px;
 }
+.contact-details h3 {
+	font-size: 20px;
+	color: #212121;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif !important
+}
+
 
 .contact-details h2 {
 	font-size: 20px;
@@ -1949,7 +1956,7 @@ span.mvp-feat1-pop-head {
 }
 
 .contact-details p span {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 600;
 }
 
@@ -2911,7 +2918,7 @@ span.mvp-feat1-pop-head {
 	margin-bottom: 20px;
 }
 
-.SectionTitle h3 {
+.SectionTitle h1 {
 	color: #181819;
 	padding: 0 15px 1px 3px;
 	display: inline;

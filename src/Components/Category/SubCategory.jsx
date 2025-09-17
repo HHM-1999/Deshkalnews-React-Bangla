@@ -215,7 +215,7 @@ export default function SubCategory() {
                         </section>
 
                         <div className="DBannerAdd text-center mt-2 mb-2">
-                            <Link to="/">
+                            <Link to="#">
                                 <img src="/media/Advertisement/Advertisement(970X90).png" alt="Advertisement" title="Advertisement" fetchpriority="high" className="img-fluid" />
                             </Link>
                         </div>
