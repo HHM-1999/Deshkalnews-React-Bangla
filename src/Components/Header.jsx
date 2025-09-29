@@ -331,12 +331,12 @@ export default function Header() {
                                     </div>
                                     <div className="menu-right header-meta-link">
                                         <ul>
-                                            <li className="menu-right-item hide "><Link to="/latest" onClick={scrollTop}>
-                                                সব খবর</Link></li>
-                                            <li className="menu-right-item"><Link to="/videos" onClick={scrollTop}><i
+                                            {/* <li className="menu-right-item hide "><Link to="/latest" onClick={scrollTop}>
+                                                সব খবর</Link></li> */}
+                                            <li className="menu-right-item others"><Link to="/videos" onClick={scrollTop}><i
                                                 className="fa-regular fa-circle-play"></i>ভিডিও</Link></li>
-                                            <li className="menu-right-item"><Link to="/photo" onClick={scrollTop}><i className="fa-solid fa-camera"></i>
-                                            ফটোগ্যালারি</Link></li>
+                                            <li className="menu-right-item others"><Link to="/photo" onClick={scrollTop}><i className="fa-solid fa-camera"></i>
+                                            ফটো</Link></li>
                                             <li className="menu-right-item en"><a href={"https://www.deshkalnews.com/"} onClick={scrollTop}><i className="fa-solid fa-globe"></i>
                                                 English</a></li>
                                             <li className="menu-right-item menu-search">
@@ -383,6 +383,26 @@ export default function Header() {
                             </div>
                         </div>
 
+
+                    </div>
+                    <div className="ScrollMenuMobile">
+                        <div className="scroll-category">
+                            <div className="container">
+                                <div className="menu-items d-flex">
+                                    
+                                    <Link onClick={scrollTop} to="/latest">সর্বশেষ</Link>
+                                    <Link onClick={scrollTop} to="/national">জাতীয়</Link>
+                                    <Link onClick={scrollTop} to="/international">আন্তর্জাতিক</Link>
+                                    <Link onClick={scrollTop} to="/politics">রাজনীতি</Link>
+                                    <Link onClick={scrollTop} to="/country">দেশজুড়ে</Link>
+                                    <Link onClick={scrollTop} to="/sports">খেলাধুলা</Link>
+                                    <Link onClick={scrollTop} to="/jobs">চাকরি</Link>
+                                    <Link onClick={scrollTop} to="/videos" className='othercat'><i className="fa-regular fa-circle-play"></i>ভিডিও</Link>
+                                    <Link onClick={scrollTop} to="/photo"  className='othercat'><i className="fa-solid fa-camera"></i>ফটো</Link>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

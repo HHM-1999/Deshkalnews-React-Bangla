@@ -482,7 +482,6 @@ span.publishTime {
 
 .header-meta-link ul li {
 	display: inline-block;
-	padding: 0 6px;
 	position: relative;
 }
 
@@ -1227,22 +1226,20 @@ a.close-search {
 
 .menu-right-item.en {
 	font-family: 'Roboto', sans-serif !important;
-	background: #191919;
-	border-radius: 5px;
-	border: 1px solid #121212;
-	padding: 2px 6px;
+	border: 1px solid #f0f0f0;
+	padding: 3px 20px;
 }
 .menu-right-item.en a {
-	color: #fff;
-	font-size: 14px;
+	color: #444;
+	font-size: 16px;
 }
 .menu-right-item.en a i {
-	color: #fff;
+	color: #444;
 	font-size: 13px;
 }
 
 .menu-right-item.en a:hover {
-	color: #ccc;
+	color: #0000;
 }
 .sticky .woodmart-logo.woodmart-sticky-logo {
 	display: block;
@@ -1936,7 +1933,9 @@ span.mvp-feat1-pop-head {
 	font-weight: 600;
 	font-family: 'Roboto', sans-serif !important
 }
-
+.main-site .menu-right-item.others{
+	display: block;
+}
 
 .contact-details h2 {
 	font-size: 20px;
@@ -2282,6 +2281,10 @@ span.mvp-feat1-pop-head {
 	line-height: 25px;
 	font-weight: 600;
 }
+.ScrollMenuMobile {
+	display: none;
+}
+
 
 .liveUpdates {
 	padding: 25px 10px 10px 10px;
@@ -4518,6 +4521,9 @@ button.printMe i.fa-solid {
 	background: #ED1C24;
 	margin-right: 8px;
 	border-radius: 50%;
+}
+.InnerReadMore .InnerReadMoreList li a:hover span{
+	color:#D81922 ;
 }
 
 .InnerReadMore .InnerReadMoreList li a i {
@@ -7852,6 +7858,41 @@ span.CategoryPageTitle {
 	.DHomeAdd970X90 {
 		display: none;
 	}
+	.ScrollMenuMobile {
+		display: block;
+	}
+	.scroll-category {
+		overflow-x: scroll;
+		padding: 5px 0;
+		background-color: #fff;
+	}
+     .menu-items .othercat{
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 600;
+		margin-right: 5px;
+		white-space: nowrap;
+	 }
+	.menu-right.header-meta-link {
+		display: flex;
+		justify-content: end;
+	}
+	.sticky .DHeaderNav {
+		padding: 9px 0 6px 0px;
+	}
+	.header-meta-link ul li.menu-search {
+		margin: 0 20px;
+		padding: 0;
+		display: flex;
+		align-items: center;
+	}
+	.DHeaderNav .menu-search .nav-link-search i {
+		font-size: 15px;
+		line-height: 20px;
+		cursor: pointer;
+		border: 1px solid #f0f0f0;
+		padding: 5px 10px;
+	}
 	.header-meta-link ul li a{
 		font-size: 15px;
 	}
@@ -7873,6 +7914,21 @@ span.CategoryPageTitle {
 	}
 	.DCatTop4 .DCatTop3tList .card-video-icon {
 		transform: translate(3.5rem, -4rem);
+	}
+	
+	.menu-items a {
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 600;
+		margin-right: 5px;
+		padding: 4px 10px;
+		white-space: nowrap;
+	}
+
+	.menu-items a i {
+		font-size: 14px;
+		color: #D81922;
+		margin-right: 3px;
 	}
 
 	.DLogo {
@@ -7933,6 +7989,9 @@ span.CategoryPageTitle {
 
 	.main-site .leadTop3 .CommonLeadList2 img {
 		width: 100% !important;
+	}
+	.main-site .menu-right-item.others{
+		display: none;
 	}
 
 	/* .sports-BGimg  .img100{
