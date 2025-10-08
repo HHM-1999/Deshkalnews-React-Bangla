@@ -109,7 +109,7 @@ export default function Latest() {
                 <div className="TopHomeSection"></div>
                 <DocumentTitle title="আজকের সর্বশেষ খবর, ব্রেকিং নিউজ | Latest news, Breaking news | DeshkalNews.com" />
                 <LatestLdJson />
-                <div className="DTitle"><Link to="/latest"><div className="DTitleInner"><h1 className="DTitleInnerBar"><span>সব খবর</span></h1></div></Link></div>
+                <div className="DTitle"><Link to="/latest"><div className="DTitleInner"><h1 className="DTitleInnerBar">সব খবর</h1></div></Link></div>
                 <div className="row archiveSection">
                     {news.map((nc) => {
                         return (

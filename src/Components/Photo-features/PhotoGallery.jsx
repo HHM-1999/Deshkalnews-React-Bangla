@@ -119,13 +119,13 @@ export default function PhotoGallery() {
 
             <main>
                 <div className="container">
-                    <h1 className="DTitle">
+                    <div className="DTitle">
                         <Link to={+ '/'} onClick={scrollTop}>
-                            <span className="DTitleInner"><span className="DTitleInnerBar"><span>ফটোগ্যালারি</span></span></span>
+                            <div className="DTitleInner"><h1 className="DTitleInnerBar">ফটোগ্যালারি</h1></div>
                         </Link>
                         <DocumentTitle title='ছবিতে সংবাদ | ফটোজার্নালিজম ও চিত্র প্রতিবেদন' />
                         <PhotoGalleryLdJson />
-                    </h1>
+                    </div>
                     <div className="row">
                         <div className="col-lg-9 mt-3 ">
                             <div className="DcatTopArea">

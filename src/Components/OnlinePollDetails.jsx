@@ -58,7 +58,7 @@ export default function OnlinePollDetails() {
                 <div className="container">
                     <div className="TopHomeSection"></div>
                     <DocumentTitle title='দেশকালনিউজ :: অনলাইন জরিপ' />
-                    <h2 className="DTitle"><Link to="/pollresult" onClick={scrollTop}><span className="DTitleInner"><span className="DTitleInnerBar"><span>অনলাইন জরিপ</span></span></span></Link></h2>
+                    <div className="DTitle"><Link to="/pollresult" onClick={scrollTop}><div className="DTitleInner"><h1 className="DTitleInnerBar">অনলাইন জরিপ</h1></div></Link></div>
 
                     <div className="row mt-5">
                         <div className="col-lg-8 col-sm-12 border-right-inner1">

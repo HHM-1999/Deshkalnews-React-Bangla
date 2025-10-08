@@ -219,7 +219,7 @@ export default function Archives() {
                 <div className="TopHomeSection"></div>
                 <DocumentTitle title="আর্কাইভ | পুরনো সব গুরুত্বপূর্ণ খবর ও রেকর্ড" />
                 <ArchiveLdJson />
-                <div className="DTitle"><Link to="/archives"><div className="DTitleInner"><h1 className="DTitleInnerBar"><span>আর্কাইভস</span></h1></div></Link></div>
+                <div className="DTitle"><Link to="/archives"><div className="DTitleInner"><h1 className="DTitleInnerBar">আর্কাইভস</h1></div></Link></div>
                 <div className="row">
                     <div className="col-sm-12 my-4">
                         <form className="form-inline" onSubmit={resultSubmit}>

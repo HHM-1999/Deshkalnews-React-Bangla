@@ -115,15 +115,15 @@ export default function SubCategory() {
             {CatName && subCatName  ? (
                 <main>
                     <div className="container">
-                        <h1 className="DTitle">
-                                <span className="DTitleInner">
-                                    <span className="DTitleInnerBar">
-                                        <span>{subCatName.CategoryName}</span>
-                                    </span>
-                                </span>
+                        <div className="DTitle">
+                                <div className="DTitleInner">
+                                    <h1 className="DTitleInnerBar">
+                                        {subCatName.CategoryName}
+                                    </h1>
+                                </div>
                             <DocumentTitle title={`${subCatName.CategoryName} | ${subCatName.CategoryName} সর্বশেষ খবর :: দেশকালনিউজ`} />
                             <SubCatLdJson CatNames={CatName} CatNameSlug={CatSlug} SubCatNames={subCatName.CategoryName} SubCatNameSlug={subCatName.Slug} />
-                        </h1>
+                        </div>
 
                         <section>
                             <div className="row">

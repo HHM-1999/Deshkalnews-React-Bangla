@@ -24,11 +24,11 @@ export default function AllWriters() {
             <div className="container">
                 <div className="TopHomeSection"></div>
                 <DocumentTitle title='দেশকালনিউজ :: লেখক সমূহ' />
-                <h1 className="DTitle">
+                <div className="DTitle">
                     <Link to={+ '/'} onClick={scrollTop}>
-                        <span className="DTitleInner"><span className="DTitleInnerBar"><span>লেখক সমূহ</span></span></span>
+                        <div className="DTitleInner"><h1 className="DTitleInnerBar">লেখক সমূহ</h1></div>
                     </Link>
-                </h1>
+                </div>
                 <div className="DTagListArea mb-5">
                     <ul className="row">
                         {allWriter.map((nc) => {

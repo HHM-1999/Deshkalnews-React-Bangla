@@ -135,10 +135,10 @@ export default function SubDistrictSlug() {
 
                         <div className="container">
                             <div className="TopHomeSection"></div>
-                            <h2 className="DTitle">
+                            <div className="DTitle">
                                 <DocumentTitle title={subDistrictName} />
-                                <Link to={+"/"}><span className="DTitleInner"><span className="DTitleInnerBar"><span>{subDistrictName}</span></span></span></Link>
-                            </h2>
+                                <Link to={+"/"}><div className="DTitleInner"><h1 className="DTitleInnerBar">{subDistrictName}</h1></div></Link>
+                            </div>
 
                             <div className="row">
                                 <div className="col-lg-12 col-sm-12 border-right-inner1">

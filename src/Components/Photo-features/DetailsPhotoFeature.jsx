@@ -62,12 +62,12 @@ export default function DetailsPhotoFeature() {
         <main>
 
           <>
-            <h2 className="DTitle">
+            <div className="DTitle">
               <Link to="/photo" onClick={scrollTop}>
-                <span className="DTitleInner"><span className="DTitleInnerBar"><span>ফটোগ্যালারি</span></span></span>
+                <div className="DTitleInner"><h1 className="DTitleInnerBar">ফটোগ্যালারি</h1></div>
               </Link>
               <DocumentTitle title={album.Title} />
-            </h2>
+            </div>
             <div className="container">
               <div className="DVideoDetailsArea mb-5 mt-4">
                 <div className="row">

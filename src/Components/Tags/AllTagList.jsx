@@ -50,11 +50,11 @@ export default function AllTagList() {
             <div className="container">
                 <div className="TopHomeSection"></div>
                 <DocumentTitle title='দেশকালনিউজ :: ট্যাগ সমূহ' />
-                <h1 className="DTitle">
+                <div className="DTitle">
                     <Link to={+ '/'} onClick={scrollTop}>
-                        <span className="DTitleInner"><span className="DTitleInnerBar"><span>ট্যাগ সমূহ</span></span></span>
+                        <div className="DTitleInner"><h1 className="DTitleInnerBar">ট্যাগ সমূহ</h1></div>
                     </Link>
-                </h1>
+                </div>
                 <div className="DTagListArea mb-5">
                     <ul className="row">
                         {allTags.map((nc) => {

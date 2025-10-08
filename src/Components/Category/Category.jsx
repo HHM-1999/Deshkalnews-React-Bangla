@@ -122,7 +122,7 @@ export default function Category() {
                 <CatLdJson CatNames={catName.CategoryName} CatNameSlug={catName.Slug} />
 
                 <div className="DTitle">
-                        <div className="DTitleInner"><h1 className="DTitleInnerBar"><span>{catName?.CategoryName || <Skeleton width={120} />}</span></h1></div>
+                        <div className="DTitleInner"><h1 className="DTitleInnerBar">{catName?.CategoryName || <Skeleton width={120} />}</h1></div>
                 </div>
 
                 {catSlug === 'country' ? <DivisionDistricName /> : <SubcatNames />}

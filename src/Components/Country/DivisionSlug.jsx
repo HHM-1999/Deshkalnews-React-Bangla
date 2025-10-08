@@ -53,10 +53,10 @@ export default function DivisionSlug() {
 
                         <div className="container">
                             <div className="TopHomeSection"></div>
-                            <h1 className="DTitle">
+                            <div className="DTitle">
                                 <DocumentTitle title={divisionName} />
-                                <Link to={+ '/'}><span className="DTitleInner"><span className="DTitleInnerBar"><span>{divisionName}</span></span></span></Link>
-                            </h1>
+                                <Link to={+ '/'}><div className="DTitleInner"><h1 className="DTitleInnerBar">{divisionName}</h1></div></Link>
+                            </div>
                             <div className="row">
                                 <div className="col-lg-9 col-sm-12 border-right-inner1">
                                     <DivisionDistricName />

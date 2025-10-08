@@ -81,10 +81,10 @@ export default function DistrictSlug() {
 
                         <div className="container">
                             <div className="TopHomeSection"></div>
-                            <h1 className="DTitle">
+                            <div className="DTitle">
                                 <DocumentTitle title={districtName} />
-                                <Link to={+"/"}><span className="DTitleInner"><span className="DTitleInnerBar"><span>{districtName}</span></span></span></Link>
-                            </h1>
+                                <Link to={+"/"}><div className="DTitleInner"><h1 className="DTitleInnerBar">{districtName}</h1></div></Link>
+                            </div>
                             {/* <SubDistrictNames divisionSlug={divisionSlug} districtSlug={districtSlug} /> */}
 
                             <div className="row">

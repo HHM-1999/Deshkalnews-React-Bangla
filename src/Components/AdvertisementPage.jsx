@@ -9,7 +9,7 @@ export default function AdvertisementPage() {
                     <div className="advertise-page">
                         <div className="TopHomeSection"></div>
                         <DocumentTitle title='Advertisement :: দেশকালনিউজ' />
-                        <h1 className="DTitleAdvertise"><span className="DTitleInner"><span className="DTitleInnerBar"><span>Advertisement</span></span></span></h1>
+                        <div className="DTitleAdvertise"><div className="DTitleInner"><h1 className="DTitleInnerBar">Advertisement</h1></div></div>
                         <div className="row">
                             <div className="col-md-11 m-auto">
                                 <div style={{ height: '90vh', overflowY: 'scroll', WebkitOverflowScrolling: 'touch' }}>
@@ -44,10 +44,7 @@ export default function AdvertisementPage() {
                                 </div> */}
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
             </main>
         </>

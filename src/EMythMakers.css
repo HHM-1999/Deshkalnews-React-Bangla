@@ -1226,8 +1226,8 @@ a.close-search {
 
 .menu-right-item.en {
 	font-family: 'Roboto', sans-serif !important;
-	border: 1px solid #f0f0f0;
-	padding: 3px 20px;
+	/* border: 1px solid #f0f0f0; */
+	padding: 3px 10px;
 }
 .menu-right-item.en a {
 	color: #444;
@@ -1238,9 +1238,9 @@ a.close-search {
 	font-size: 13px;
 }
 
-.menu-right-item.en a:hover {
+/* .menu-right-item.en a:hover {
 	color: #0000;
-}
+} */
 .sticky .woodmart-logo.woodmart-sticky-logo {
 	display: block;
 }
@@ -1935,6 +1935,7 @@ span.mvp-feat1-pop-head {
 }
 .main-site .menu-right-item.others{
 	display: block;
+	padding: 0 10px;
 }
 
 .contact-details h2 {
@@ -6308,9 +6309,6 @@ span.CategoryPageTitle {
 	display: inline-block;
 	padding: 0;
 	background: #fff;
-}
-
-.main-site .DTitleInner span {
 	color: #db0303;
 	font-size: 24px;
 	font-weight: 600;
@@ -7899,6 +7897,11 @@ span.CategoryPageTitle {
 	.DHomeAdd350x250 {
 		display: flex;
 		justify-content: center;
+	}
+	.menu-right-item.en {
+		font-family: 'Roboto', sans-serif !important;
+		border: 1px solid #f0f0f0;
+		padding: 3px 20px;
 	}
 
 	.DBorderRight {
