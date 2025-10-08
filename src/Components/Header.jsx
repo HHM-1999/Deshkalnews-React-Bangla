@@ -337,7 +337,7 @@ export default function Header() {
                                                 className="fa-regular fa-circle-play"></i>ভিডিও</Link></li>
                                             <li className="menu-right-item others"><Link to="/photo" onClick={scrollTop}><i className="fa-solid fa-camera"></i>
                                             ফটো</Link></li>
-                                            <li className="menu-right-item en"><a href={"https://www.deshkalnews.com/"} onClick={scrollTop}><i className="fa-solid fa-globe"></i>
+                                            <li className="menu-right-item en"><a href={"https://www.karikori.com/"} onClick={scrollTop}><i className="fa-solid fa-globe"></i>
                                                 English</a></li>
                                             <li className="menu-right-item menu-search">
                                                 <span className="nav-link nav-link-search" onClick={setToggle}>
