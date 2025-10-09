@@ -17,7 +17,7 @@ import favicon from '../../assets/media/common/favicon.png'
 import { toBengaliNumber } from 'bengali-number'
 import innerAds from '../../assets/media/Advertisement/300 x250 - Details.jpg'
 // import topAds from '../../assets/media/Advertisement/970 x 90 -details.jpg'
-    import Ads from '../../assets/media/Advertisement/300 x250 - Details.jpg';
+    // import Ads from '../../assets/media/Advertisement/300 x250 - Details.jpg';
 var lazyloaded = false
 var dateArray = []
 var allTags
@@ -319,20 +319,20 @@ export default function Details() {
             return htmlString; // Not enough paragraphs to inject
         }
 
-        const adHTML = `
-          <div class="AdsHideDetails mb-4 d-print-none">
-            <a href="https://www.shwapno.com/" target='_blank'>
-              <img src="${innerAds}"
-                   alt="Advertisement" title="Advertisement" fetchpriority="high"  />
-            </a>
-          </div>
-        `;
+        // const adHTML = `
+        //   <div class="AdsHideDetails mb-4 d-print-none">
+        //     <a href="https://www.shwapno.com/" target='_blank'>
+        //       <img src="${innerAds}"
+        //            alt="Advertisement" title="Advertisement" fetchpriority="high"  />
+        //     </a>
+        //   </div>
+        // `;
 
         const result = paragraphs.map((para, index) => {
             if (para.trim() === "") return "";
             const rebuilt = para + "</p>";
             if (index === afterParagraph - 1) {
-                return rebuilt + adHTML;
+                // return rebuilt + adHTML;
             }
             return rebuilt;
         });
@@ -773,13 +773,13 @@ export default function Details() {
                                     </div>
                                     <div className="col-lg-4 col-12 d-none d-lg-block detailsPage">
                                         <DCatLatest catLatest={catLatest} catName={catName} />
-                                        <div className="Ads-area sticky-ads">
+                                        {/* <div className="Ads-area sticky-ads">
                                             <a href="https://www.shwapno.com/" target='_blank' rel="noreferrer">
                                                 <div className="DRightSideAddFeature">
                                                     <img src={Ads} alt="Shwapno.com" title="Shwapno.com" fetchpriority="high" />
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="col-sm-12 d-print-none">
