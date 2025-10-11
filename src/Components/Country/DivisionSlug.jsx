@@ -89,7 +89,7 @@ export default function DivisionSlug() {
                                                                                 </Link>
                                                                             </div> :
                                                                             <div className="DivisionListNews">
-                                                                                <Link to={"/" + divisionSlug + "/" + nd.ContentID} onClick={scrollTop}>
+                                                                                <Link to={"/country/" + nd.ContentID} onClick={scrollTop}>
                                                                                     <div className="Desc">
                                                                                         <h3 className="Title">
                                                                                             {nd.DetailsHeading}
