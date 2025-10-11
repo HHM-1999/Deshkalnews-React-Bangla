@@ -67,7 +67,7 @@ export default function DivisionSlug() {
                                                     <div className="col-lg-4 col-sm-12" key={i}>
                                                         <div className="Division-panel">
                                                             <div className="DivisionHeader">
-                                                                <Link to={`/divisions/${divisionSlug}` + '/' + nc.districtSlug} onClick={scrollTop}>
+                                                                <Link to={`/divisions/${divisionSlug}/` + nc.districtSlug} onClick={scrollTop}>
                                                                     {nc.districtNameBn}
                                                                 </Link>
                                                             </div>
@@ -76,7 +76,7 @@ export default function DivisionSlug() {
                                                                     <div className="DivisionBody" key={i}>
                                                                         {i === 0 ?
                                                                             <div className="DivisionLeadNews">
-                                                                                <Link rel="preload" as="image" to={"/country" + "/" + nd.ContentID} onClick={scrollTop}>
+                                                                                <Link rel="preload" as="image" to={"/country/" + nd.ContentID} onClick={scrollTop}>
                                                                                     <div className="DImgBlock card-video-part">
                                                                                         <div className="DImgZoomBlock">
                                                                                             <picture><img src={process.env.REACT_APP_LAZYL_IMG} data-src={process.env.REACT_APP_IMG_Path + nd.ImageBgPath} alt={nd.DetailsHeading} title={nd.DetailsHeading} fetchpriority="high" style={{width: "100%", height:"auto"}} /></picture>
