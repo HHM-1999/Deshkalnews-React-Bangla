@@ -4,29 +4,71 @@ import { Helmet } from "react-helmet";
 export default function HomeLdjsonBn() {
     return (
         <Helmet>
+            {/* Organization Schema --> */}
             <script type="application/ld+json">
-                {`
-                    {
-                        "name":"deshkalnews.com",
-                        "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}",
-                        "logo":{
-                            "@context":"http://schema.org",
-                            "@type":"ImageObject",
-                            "author":"DeshKalNews :: দেশকালনিউজ.কম",
-                            "contentUrl":"${process.env.REACT_APP_FONT_DOMAIN_URL}media/common/logo.png",
-                            "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}media/common/logo.png",
-                            "name":"logo",
-                            "width":"250",
-                            "height":"99"
+                {`{
+                        "@context": "https://schema.org",
+                        "@type": "NewsMediaOrganization",
+                        "name": "দেশকাল নিউজ",
+                        "alternateName": "Deshkal News",
+                        "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}",
+                        "logo": {
+                          "@type": "ImageObject",
+                          "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}media/common/logo.png",
+                          "width": 300,
+                          "height": 300
                         },
-                        "sameAs":[
-                            
+                        "foundingDate": "২০২৪-০১-০১",
+                        "founder": {
+                          "@type": "Person",
+                          "name": "ইলিয়াস উদ্দিন পলাশ",
+                          "jobTitle": "প্রতিষ্ঠাতা ও প্রধান সম্পাদক",
+                          "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}about"
+                        },
+                        "publisher": {
+                          "@type": "Organization",
+                          "name": "দেশকাল নিউজ",
+                          "logo": {
+                            "@type": "ImageObject",
+                            "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}media/common/logo.png"
+                          }
+                        },
+                        "contactPoint": {
+                          "@type": "ContactPoint",
+                          "contactType": "সম্পাদকীয় বিভাগ",
+                          "email": "info@deshkalnews.com",
+                          "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}contact-us"
+                        },
+                        "address": {
+                          "@type": "PostalAddress",
+                          "streetAddress": "১১/৮/ডি (২য় তলা), প্যারাডাইস মারিয়া, ফ্রি স্কুল স্ট্রিট",
+                          "addressLocality": "ঢাকা",
+                          "postalCode": "1205",
+                          "addressRegion": "ঢাকা",
+                          "addressCountry": "BD"
+                        },
+                        "telephone": "+880241062939",
+                        "inLanguage": "bn",
+                        "description": "দেশকাল নিউজ একটি বিশ্বাসযোগ্য বাংলাদেশি সংবাদ প্ল্যাটফর্ম যা বাংলা ও ইংরেজি ভাষায় জাতীয়, আন্তর্জাতিক এবং জনস্বার্থ সংশ্লিষ্ট খবর পরিবেশন করে।",
+                        "headline": "দেশকাল নিউজ - নির্ভরযোগ্য জাতীয় ও আন্তর্জাতিক সংবাদ মাধ্যম",
+                        "sameAs": [
+                          "https://www.facebook.com/DeshkalNews24",
+                          "https://www.instagram.com/Deshkalnews",
+                          "https://x.com/Deshkalnews",
+                          "https://www.youtube.com/@DeshkalNews24",
+                          "https://www.linkedin.com/company/deshkal-news",
+                          "https://www.threads.net/@deshkalnews"
                         ],
-                        "@type":"Organization",
-                        "@context":"http://schema.org"
-                    }  
-                `}
+                        "potentialAction": {
+                          "@type": "SearchAction",
+                          "target": "${process.env.REACT_APP_FONT_DOMAIN_URL}search/",
+                          "query-input": "required name=query"
+                        }
+                      }
+`
+                }
             </script>
+            {/* Breadcrumb Schema --> */}
             <script type="application/ld+json">
                 {`
                     {
@@ -44,59 +86,6 @@ export default function HomeLdjsonBn() {
                        
                 `}
             </script>
-            <script type="application/ld+json">
-                {`
-                    {
-                        "@context":"http://schema.org",
-                        "@type":"Website",
-                        "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}",
-                        "interactivityType":"mixed",
-                        "name":"deshkalnews.com",
-                        "headline":"DeshKalNews.com | বাংলাদেশ ও বিশ্বসংবাদ | সর্বশেষ খবর",
-                        "keywords":"DeshKalNews.com, Deshkal News, বাংলাদেশ সংবাদ, সর্বশেষ খবর, বাংলা নিউজ, জাতীয় খবর, রাজনীতি, আন্তর্জাতিক সংবাদ, খেলার খবর, বিনোদন, অর্থনীতি, প্রযুক্তি, ব্রেকিং নিউজ, আজকের খবর, মতামত, চাকরির খবর, ইসলাম",
-                        "copyrightHolder":{
-                            "@type":"Organization",
-                            "name":"deshkalnews.com"
-                        },
-                        "potentialAction":{
-                            "@type":"SearchAction",
-                            "target":"${process.env.REACT_APP_FONT_DOMAIN_URL}search/{query}",
-                            "query-input":"required name=query"
-                        },
-                        "mainEntityOfPage":{
-                            "@type":"WebPage",
-                            "@id":"${process.env.REACT_APP_FONT_DOMAIN_URL}"
-                        }
-                    }
-                       
-                `}
-            </script>
-            <script type="application/ld+json">
-                {`
-                    {
-                        "@context":"http://schema.org",
-                        "@type":"LocalBusiness",
-                        "name":"Deshkal News",
-                        "image":"${process.env.REACT_APP_FONT_DOMAIN_URL}media/common/logo.png",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "11/8/D (2nd Floor), Paradise Maria, Free School St",
-                            "addressLocality": "Dhaka",
-                            "postalCode": "1205",
-                            "addressRegion": "Dhaka",
-                            "addressCountry": "BD"
-                          },
-                          "telephone": "+880 2-41062939",
-                          "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}",
-                          "openingHours": [
-                            "Mo-Su 00:00-23:59"
-                          ]
-                        }
-                    }
-                       
-                `}
-            </script>
         </Helmet>
     )
 }
-                                                                                                                                                                                                                                                  
