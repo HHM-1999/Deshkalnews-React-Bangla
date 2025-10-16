@@ -32,7 +32,8 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                         "dateCreated": "${convertToBSTISOString(news.created_at)}",
                         "author": {
                           "@type": "Organization",
-                          "name": "Deshkal News"
+                          "name": "Deshkal News Desk",
+                          "url": "${process.env.REACT_APP_FONT_DOMAIN_URL}"
                         },
                         "publisher": {
                           "@type": "Organization",
