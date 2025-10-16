@@ -83,10 +83,10 @@ app.get('/', function (request, response) {
         }
 
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
-        data = data.replace(/\$OG_TITLE/g, 'DeshKalNews.com | বাংলাদেশ ও বিশ্ব সংবাদ | সর্বশেষ খবর');
-        data = data.replace(/\$OG_DESCRIPTION/g, "DeshKalNews.com || দেশকালনিউজ.কম: Find breaking Bangladeshi news, Economic, Business updates, and Crime reports. Get 24/7 coverage on national, international news, entertainment, celebrity, sports, technology, lifestyle news and more at deshkalnews");
-        data = data.replace(/\$OG_KEYWORDS/g, "DeshKalNews.com, Deshkal News, বাংলাদেশ সংবাদ, সর্বশেষ খবর, বাংলা নিউজ, জাতীয় খবর, রাজনীতি, আন্তর্জাতিক সংবাদ, খেলার খবর, বিনোদন, অর্থনীতি, প্রযুক্তি, ব্রেকিং নিউজ, আজকের খবর, মতামত, চাকরির খবর, ইসলাম");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$OG_TITLE/g, 'Deshkal News.com | বাংলাদেশ ও বিশ্ব সংবাদ | সর্বশেষ খবর');
+        data = data.replace(/\$OG_DESCRIPTION/g, "Deshkal News.com || দেশকালনিউজ.কম: Find breaking Bangladeshi news, Economic, Business updates, and Crime reports. Get 24/7 coverage on national, international news, entertainment, celebrity, sports, technology, lifestyle news and more at Deshkal News");
+        data = data.replace(/\$OG_KEYWORDS/g, "Deshkal News.com, Deshkal News, বাংলাদেশ সংবাদ, সর্বশেষ খবর, বাংলা নিউজ, জাতীয় খবর, রাজনীতি, আন্তর্জাতিক সংবাদ, খেলার খবর, বিনোদন, অর্থনীতি, প্রযুক্তি, ব্রেকিং নিউজ, আজকের খবর, মতামত, চাকরির খবর, ইসলাম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + request.originalUrl;
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -106,7 +106,7 @@ app.get('/archives', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'আর্কাইভ | পুরনো সব গুরুত্বপূর্ণ খবর ও রেকর্ড');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকাল নিউজের সংরক্ষিত পুরনো সব প্রতিবেদন এক জায়গায়");
         data = data.replace(/\$OG_KEYWORDS/g, "আর্কাইভ, পুরনো খবর, সংরক্ষণ, News Archive");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -123,10 +123,10 @@ app.get('/latest', function (request, response) {
             return console.log(err);
         }
         data = data.replace(/\$OG_ROBOTS/g, `index, follow`);
-        data = data.replace(/\$OG_TITLE/g, 'আজকের সর্বশেষ খবর, ব্রেকিং নিউজ | Latest news, Breaking news | DeshkalNews.com');
+        data = data.replace(/\$OG_TITLE/g, 'আজকের সর্বশেষ খবর, ব্রেকিং নিউজ | Latest news, Breaking news | Deshkal News.com');
         data = data.replace(/\$OG_DESCRIPTION/g, "Read today's breaking news of Bangladesh on politics, sports, business, entertainment, weather, lifestyle, education, tourism, and latest bd news leading Bangla News portal Deshkal News");
         data = data.replace(/\$OG_KEYWORDS/g, "সব খবর, আজকের খবর, আজকের সর্বশেষ সংবাদ, ব্রেকিং নিউজ, বাংলা সংবাদ, দেশকালনিউজ.কম");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -147,7 +147,7 @@ app.get('/tags', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: ট্যাগ সমূহ');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: ট্যাগ সমূহ");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -168,7 +168,7 @@ app.get('/writers', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: লেখক সমূহ');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: লেখক সমূহ");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -192,7 +192,7 @@ app.get('/videos', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: ভিডিও গ্যালারী');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: ভিডিও গ্যালারী");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -214,7 +214,7 @@ app.get('/photo', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'ছবিতে সংবাদ | ফটোজার্নালিজম ও চিত্র প্রতিবেদন');
         data = data.replace(/\$OG_DESCRIPTION/g, "খবরকে জীবন্ত করে তুলেছে আমাদের তোলা ছবিগুলো");
         data = data.replace(/\$OG_KEYWORDS/g, "সংবাদ ছবি, ছবি প্রতিবেদন, ছবিতে সংবাদ");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -237,7 +237,7 @@ app.get('/staff-member', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: স্টাফ');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: স্টাফ");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -259,7 +259,7 @@ app.get('/privacy-policy', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: Privacy Policy');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: Privacy Policy");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -281,7 +281,7 @@ app.get('/terms-service', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: Terms & Conditions');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: Terms & Conditions");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -303,7 +303,7 @@ app.get('/contact-us', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: যোগাযোগ');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: যোগাযোগ");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -325,7 +325,7 @@ app.get('/advertise', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: Advertisement');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: Advertisement");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -347,7 +347,7 @@ app.get('/about', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'দেশকালনিউজ :: About');
         data = data.replace(/\$OG_DESCRIPTION/g, "দেশকালনিউজ :: About");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -561,7 +561,7 @@ app.get('/:catSlug', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${displayTitle}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${description}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
 
                 // Full URL (ensure correct host/protocol)
@@ -582,7 +582,7 @@ app.get('/:catSlug', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -605,7 +605,7 @@ app.get('/:catSlug', async function (request, response) {
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found - Something Went Wrong`);
-            data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+            data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
             data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
             // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
             // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -666,14 +666,14 @@ app.get('/rss/rss.xml', async function (request, response) {
                        version="2.0">
         <channel>
           <title><![CDATA[ দেশকালনিউজ.কম ]]></title>
-          <description><![CDATA[ DeshKalNews.com:: দেশকালনিউজ.কম ]]></description>
+          <description><![CDATA[ Deshkal News.com:: দেশকালনিউজ.কম ]]></description>
           <link>${FEndUrl}/</link>
           <image>
             <url>${BEndUrl}/media/common/thumb.jpg</url>
-            <title>DeshKalNews.com - RSS</title>
+            <title>Deshkal News.com - RSS</title>
             <link>${FEndUrl}/</link>
           </image>
-          <generator>RSS by DeshkalNews.com</generator>
+          <generator>RSS by Deshkal News.com</generator>
           <lastBuildDate>${curdate}</lastBuildDate>
           <copyright><![CDATA[ Copyright: (C) দেশকালনিউজ.কম. ]]></copyright>
           <language><![CDATA[ bn ]]></language>
@@ -783,13 +783,13 @@ app.get('/rss/rssvideo.xml', function (request, response) {
                 <channel>
                 <title><![CDATA[ দেশকালনিউজ.কম ]]></title>
                 <link>${FEndUrl}/</link>
-                <description>DeshKalNews.com:: দেশকালনিউজ.কম</description>
+                <description>Deshkal News.com:: দেশকালনিউজ.কম</description>
                 <image>
                     <url>${BEndUrl}/media/common/thumb.jpg</url>
-                    <title>DeshKalNews.com- Video Gallery - RSS</title>
+                    <title>Deshkal News.com- Video Gallery - RSS</title>
                     <link>${FEndUrl}/</link>
                 </image>
-                <generator>RSS by DeshKalNews.com</generator>
+                <generator>RSS by Deshkal News.com</generator>
                 <lastBuildDate>${curdate}</lastBuildDate>
                 <copyright>
                     <![CDATA[ Copyright: (C) দেশকালনিউজ.কম. ]]>
@@ -1007,7 +1007,7 @@ app.get('/search/:searchSlug', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, 'খুঁজুন | খুঁজুন সর্বশেষ খবর :: দেশকালনিউজ.কম');
         data = data.replace(/\$OG_DESCRIPTION/g, "খুঁজুন | খুঁজুন সর্বশেষ খবর :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_KEYWORDS/g, "দেশকালনিউজ, পত্রিকা, বাংলাদেশ, আজকের পত্রিকা, জাতীয়, সারাদেশ, বরিশাল, চট্টগ্রাম, ঢাকা,খুলনা, রাজশাহী, সিলেট, রংপুর, ময়মনসিংহ, রাজধানী, আন্তর্জাতিক, রাজনীতি, বিনোদন , দেশি, বিদেশি, খেলা, ক্রিকেট, বিশ্বকাপ ক্রিকেট, বিশেষ কলাম, অর্থনীতি, ধর্ম, লাইফস্টাইল, ফ্যাশন, রেসিপি, সাত রঙ, সাতরঙ,  দূরবীন, প্রথম প্রহর, বইমেলা, তথ্যপ্রযুক্তি, শিক্ষাঙ্গন, আইন-আদালত, আইন আদালত, শিল্প ও সাহিত্, শিল্প সাহিত্, স্বাস্থ্য ও চিকিৎসা, স্বাস্থ্য চিকিৎসা, ফিচার, বিজ্ঞান, ভ্রমণ, মুক্তকথা, মুখোমুখি, প্রবাস জীবন, জব কর্নার, জব, মজার খবর, কার্টুন, সোশ্যাল মিডিয়া, সাইবার স্পেস, আর্কাইভ, সাহিত্য, কম্পিউটার, মোবাইল ফোন, গেমস, সরকার, অপরাধ, আইন ও বিচার, পরিবেশ, দুর্ঘটনা, সংসদ, রাজধানী, শেয়ার বাজার, বাণিজ্য, পোশাক শিল্প, ফুটবল, সকাল, বিকাল");
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1039,7 +1039,7 @@ app.get('/tags/:TagTitle', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1108,7 +1108,7 @@ app.get('/writers/:WriterSlug', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1177,7 +1177,7 @@ app.get('/divisions/:divisionSlug', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1249,7 +1249,7 @@ app.get('/videos/:vdoID', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${description}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `https://img.youtube.com/vi/${image}/0.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1266,7 +1266,7 @@ app.get('/videos/:vdoID', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1286,7 +1286,7 @@ app.get('/videos/:vdoID', async function (request, response) {
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found - Something Went Wrong`);
-            data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+            data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
             data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
             // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
             // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1321,7 +1321,7 @@ app.get('/events/:EventSlug', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1338,7 +1338,7 @@ app.get('/events/:EventSlug', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1358,7 +1358,7 @@ app.get('/events/:EventSlug', async function (request, response) {
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found - Something Went Wrong`);
-            data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+            data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
             data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
             // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
             // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1406,7 +1406,7 @@ app.get('/photo/:photoID', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${description}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${CDNUrl}/media/${image}`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1424,7 +1424,7 @@ app.get('/photo/:photoID', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1445,7 +1445,7 @@ app.get('/photo/:photoID', async function (request, response) {
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found - Something Went Wrong`);
-            data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+            data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
             data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
             // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
             // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1479,7 +1479,7 @@ app.get('/:catSlug/sub/:subCatSlug', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.get('host') + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1496,7 +1496,7 @@ app.get('/:catSlug/sub/:subCatSlug', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.get('host') + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1516,7 +1516,7 @@ app.get('/:catSlug/sub/:subCatSlug', async function (request, response) {
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found - Something Went Wrong`);
-            data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+            data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
             data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
             // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
             // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1568,7 +1568,7 @@ app.get('/:catSlug/:id', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${description}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${CDNUrl}/media/${image}`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1587,7 +1587,7 @@ app.get('/:catSlug/:id', async function (request, response) {
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1610,7 +1610,7 @@ app.get('/:catSlug/:id', async function (request, response) {
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found - Something Went Wrong`);
-            data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+            data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
             data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
             // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
             // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1643,7 +1643,7 @@ app.get('/divisions/:divisionSlug/:districtSlug', async function (request, respo
                 data = data.replace(/\$OG_TITLE/g, `${title}`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `${title}`);
                 data = data.replace(/\$OG_KEYWORDS/g, `${keyword}`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1660,7 +1660,7 @@ app.get('/divisions/:divisionSlug/:districtSlug', async function (request, respo
                 data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
                 data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found`);
-                data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+                data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
                 data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
                 // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
                 // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1680,7 +1680,7 @@ app.get('/divisions/:divisionSlug/:districtSlug', async function (request, respo
             data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found - Something Went Wrong`);
             data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found - Something Went Wrong`);
-            data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+            data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
             data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
             // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
             // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
@@ -1706,7 +1706,7 @@ app.get('*', function (request, response) {
         data = data.replace(/\$OG_TITLE/g, `404 - Nothing Found`);
         data = data.replace(/\$OG_DESCRIPTION/g, `404 - Nothing Found`);
         data = data.replace(/\$OG_KEYWORDS/g, `404, Nothing Found`);
-        data = data.replace(/\$AUTHOR/g, "DeshKalNews :: দেশকালনিউজ.কম");
+        data = data.replace(/\$AUTHOR/g, "Deshkal News :: দেশকালনিউজ.কম");
         data = data.replace(/\$OG_IMAGE/g, `${BEndUrl}/media/common/thumb.jpg`);
         // var fullUrl = request.protocol + '://' + request.hostname + (request.originalUrl).replace(/\/+$/, '');
         // var fullUrl = request.get('x-forwarded-proto') + '://' + request.get('X-Forwarded-Host') + (request.originalUrl).replace(/\/+$/, '');
