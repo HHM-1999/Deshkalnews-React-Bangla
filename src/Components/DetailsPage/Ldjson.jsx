@@ -121,12 +121,12 @@ export default function Ldjson({ news, catName, catSlug,DisplayCatName }) {
                         "publisher":{
                             "@type":"Organization",
                             "@context":"http://schema.org",
-                            "name":"DeshKalNews",
+                            "name":"Deshkal News",
                             "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}",
                             "logo":{
                                 "@context":"http://schema.org",
                                 "@type":"ImageObject",
-                                "author":"DeshKalNews :: দেশকালনিউজ.কম",
+                                "author":"Deshkal News :: দেশকালনিউজ.কম",
                                 "contentUrl":"${process.env.REACT_APP_FONT_DOMAIN_URL}media/common/logo.png",
                                 "url":"${process.env.REACT_APP_FONT_DOMAIN_URL}media/common/logo.png",
                                 "name":"logo",

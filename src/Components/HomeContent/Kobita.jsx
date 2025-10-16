@@ -38,7 +38,7 @@ export default function Kobita() {
                     <div className="row">
                         <div className="col-lg-5 col-5">
                             <picture>
-                                <img className="img-fluid img100" src={Pen} alt="deshkalnews" title="deshkalnews" fetchpriority="high" />
+                                <img className="img-fluid img100" src={Pen} alt="Deshkal News" title="Deshkal News" fetchpriority="high" />
                             </picture>
                         </div>
                         <div className="col-lg-7 col-7">

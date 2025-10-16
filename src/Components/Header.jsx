@@ -67,7 +67,7 @@ export default function Header() {
                                 <div className="col-12 col-md-6 d-flex align-items-start justify-content-start">
                                     <div className="DLogo">
                                         <a rel="preload" as="image" href="/"><img className="img-fluid img100" src={Logo}
-                                            alt="DeshkalNews.com :: দেশকালনিউজ.কম" title="DeshkalNews.com :: দেশকালনিউজ.কম" style={{width: "300px", height:"35px"}} /></a>
+                                            alt="Deshkal News.com :: দেশকালনিউজ.কম" title="Deshkal News.com :: দেশকালনিউজ.কম" style={{width: "300px", height:"35px"}} /></a>
                                     </div>
                                 </div>
                                 <div className="col-3 col-md-6 d-flex align-items-center justify-content-end">
@@ -233,8 +233,8 @@ export default function Header() {
                                             </div>
                                         </div>
                                         <a href="/" className="StickyLogo" rel="home">
-                                            <img src={Logo} title="DeshkalNews.com"
-                                                alt="DeshkalNews.com" className="img-fluid img100" />
+                                            <img src={Logo} title="Deshkal News.com"
+                                                alt="Deshkal News.com" className="img-fluid img100" />
                                         </a>
                                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

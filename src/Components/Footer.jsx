@@ -34,8 +34,8 @@ const Footer = () => {
                             <div className="col-lg-6 col-12 d-flex align-items-center justify-content-center">
                                 <div className="footerMiddle">
                                     <div className="footer-logo">
-                                        <a href="/"> <img src={Logo} alt="DeshKalNews.com"
-                                            title="DeshKalNews.com" />
+                                        <a href="/"> <img src={Logo} alt="Deshkal News.com"
+                                            title="Deshkal News.com" />
                                         </a>
                                     </div>
                                     <ul className="footer-links">

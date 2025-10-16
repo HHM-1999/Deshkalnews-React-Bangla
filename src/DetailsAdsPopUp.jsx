@@ -26,7 +26,7 @@ const AdsPopUp = () => {
       {isVisible && (
       <div style={styles.overlay}>
         <div style={styles.popup} className="pt-4">
-          <img src={Ads} alt="DeshKalNews" title="DeshKalNews" className="AdsHide"></img>
+          <img src={Ads} alt="Deshkal News" title="Deshkal News" className="AdsHide"></img>
           <img src="/media/Advertisement/advertisement-320x480.png"  alt="" title="" className="mbAds"></img>
           <button onClick={closePopup}  style={styles.closeButton}>
             X

@@ -22,7 +22,7 @@ export default function ErrorPage() {
                             4<span>0</span>4
                         </div>
                         <h1 className='ErrorHeader'>এ পৃষ্ঠাটি পাওয়া যায়নি</h1>
-                        <p className='ErrorText'>আপনার প্রয়োজনীয় পৃষ্ঠাটি পাওয়া যায়নি। আমরা আন্তরিক ভাবে দু:খিত।আমরা আপনাকে আপাতত প্রচ্ছদে ফিরিয়ে নিচ্ছি। DeshKalNews.com এর সাথে থাকার জন্যে আপনাকে ধন্যবাদ।
+                        <p className='ErrorText'>আপনার প্রয়োজনীয় পৃষ্ঠাটি পাওয়া যায়নি। আমরা আন্তরিক ভাবে দু:খিত।আমরা আপনাকে আপাতত প্রচ্ছদে ফিরিয়ে নিচ্ছি। Deshkal News.com এর সাথে থাকার জন্যে আপনাকে ধন্যবাদ।
                             <br />
                             আপনার যে কোন মতামত আমাদের সমৃদ্ধ করবে। আপনার মতামত জানাতে আমাদের ইমেইল করুন:<a href="mailto:newsdesk.com"><span>newsdesk.com.</span></a></p>
                         <button className='ErrorsBtn mt-4'>

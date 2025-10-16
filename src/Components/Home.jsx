@@ -63,7 +63,7 @@ export default function Home() {
     return (
         <>
             <main>
-                <DocumentTitle title='DeshKalNews.com | বাংলাদেশ ও বিশ্ব সংবাদ | সর্বশেষ খবর' />
+                <DocumentTitle title='Deshkal News.com | বাংলাদেশ ও বিশ্ব সংবাদ | সর্বশেষ খবর' />
                 <HomeLdjsonBn />
                 <Events />
                 <LeadNews />

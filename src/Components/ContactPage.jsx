@@ -1,6 +1,4 @@
 import DocumentTitle from 'react-document-title'
-import { Link } from 'react-router-dom'
-import { scrollTop } from '../Components/AllFunctions'
 import FBpagePlugin from './FBpagePlugin'
 
 

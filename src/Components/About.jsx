@@ -7,7 +7,7 @@ const About = () => {
             <DocumentTitle title='দেশকালনিউজ.কম :: About' />
             <div className='page-english'>
                 <div className="container">
-                    <div className="SectionTitle"><h1><span className="ColorBox"></span>About for DeshKalNews.com</h1></div>
+                    <div className="SectionTitle"><h1><span className="ColorBox"></span>About for Deshkal News.com</h1></div>
                     <div className="row">
                         <div className="col-md-12">
                             <div className='about-section'>
